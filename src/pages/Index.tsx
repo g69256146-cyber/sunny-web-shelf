@@ -2,40 +2,38 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Target, Users, Lightbulb, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-
-const features = [
-  {
-    icon: Target,
-    title: "Mission-Driven",
-    description: "Focused on delivering impactful outcomes that drive real-world change and innovation.",
-  },
-  {
-    icon: Users,
-    title: "Collaborative",
-    description: "Working together with partners and stakeholders to achieve shared goals and objectives.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovative",
-    description: "Pioneering new approaches and solutions to address complex challenges effectively.",
-  },
-  {
-    icon: Award,
-    title: "Excellence",
-    description: "Committed to the highest standards of quality in everything we undertake.",
-  },
-];
-
-const stats = [
-  { value: "50+", label: "Projects Completed" },
-  { value: "25+", label: "Team Members" },
-  { value: "10+", label: "Years Experience" },
-  { value: "100%", label: "Commitment" },
-];
-
+const features = [{
+  icon: Target,
+  title: "Mission-Driven",
+  description: "Focused on delivering impactful outcomes that drive real-world change and innovation."
+}, {
+  icon: Users,
+  title: "Collaborative",
+  description: "Working together with partners and stakeholders to achieve shared goals and objectives."
+}, {
+  icon: Lightbulb,
+  title: "Innovative",
+  description: "Pioneering new approaches and solutions to address complex challenges effectively."
+}, {
+  icon: Award,
+  title: "Excellence",
+  description: "Committed to the highest standards of quality in everything we undertake."
+}];
+const stats = [{
+  value: "50+",
+  label: "Projects Completed"
+}, {
+  value: "25+",
+  label: "Team Members"
+}, {
+  value: "10+",
+  label: "Years Experience"
+}, {
+  value: "100%",
+  label: "Commitment"
+}];
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden">
         {/* Background Pattern */}
@@ -81,14 +79,10 @@ const Index = () => {
       <section className="py-16 bg-card border-y border-border">
         <div className="container mx-auto container-padding">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary">
-                  {stat.value}
-                </div>
-                <div className="mt-2 text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+            {stats.map((stat, index) => <div key={index} className="text-center">
+                
+                
+              </div>)}
           </div>
         </div>
       </section>
@@ -107,11 +101,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border"
-              >
+            {features.map((feature, index) => <div key={index} className="p-6 bg-card rounded-xl card-hover border border-border">
                 <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
@@ -119,8 +109,7 @@ const Index = () => {
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -191,8 +180,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
