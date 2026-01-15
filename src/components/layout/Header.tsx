@@ -24,7 +24,14 @@ const Header = () => {
             <div className="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-lg">M</span>
             </div>
-            <span className="font-display font-semibold text-xl text-foreground">MCACP</span>
+            <div className="flex flex-col">
+              <span className="font-display font-semibold text-lg text-foreground leading-tight">
+                MCACP
+              </span>
+              <span className="text-xs text-muted-foreground hidden sm:block">
+                ICU Palliative Care Research
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,7 +50,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild>
-              <Link to="/contact">Get in Touch</Link>
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 
@@ -77,7 +84,7 @@ const Header = () => {
               ))}
               <Button asChild className="mt-2">
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Get in Touch
+                  Contact Us
                 </Link>
               </Button>
             </div>
