@@ -1,77 +1,77 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Linkedin } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
-const teamMembers = [
+const principalInvestigator = {
+  name: "Dr. Naveen Salins",
+  role: "Principal Investigator",
+  affiliation: "Professor, Department of Palliative Medicine and Supportive Care",
+  institution: "Kasturba Medical College, Manipal, MAHE",
+  bio: "Leading expert in palliative medicine with extensive experience in clinical research and healthcare policy development.",
+  initials: "NS",
+};
+
+const researchTeam = [
   {
-    name: "Dr. Sarah Mitchell",
-    role: "Executive Director",
-    bio: "20+ years of experience in research leadership and strategic development.",
-    initials: "SM",
+    name: "Dr. Anuja Damani",
+    role: "Co-Investigator",
+    bio: "Specialist in palliative care research methodology and patient outcomes assessment.",
+    initials: "AD",
   },
   {
-    name: "Michael Chen",
-    role: "Director of Research",
-    bio: "Expert in data analytics and evidence-based policy development.",
-    initials: "MC",
+    name: "Dr. Sunil Rao",
+    role: "Research Fellow",
+    bio: "Focus on mixed-methods research and qualitative data analysis.",
+    initials: "SR",
   },
   {
-    name: "Dr. Emily Rodriguez",
-    role: "Senior Research Fellow",
-    bio: "Specializes in community engagement and participatory research methods.",
-    initials: "ER",
-  },
-  {
-    name: "James Wilson",
-    role: "Operations Manager",
-    bio: "Oversees project delivery and organizational efficiency.",
-    initials: "JW",
-  },
-  {
-    name: "Dr. Aisha Patel",
-    role: "Lead Analyst",
-    bio: "Expert in quantitative methods and impact assessment.",
-    initials: "AP",
-  },
-  {
-    name: "David Thompson",
-    role: "Communications Lead",
-    bio: "Manages stakeholder engagement and knowledge dissemination.",
-    initials: "DT",
-  },
-  {
-    name: "Dr. Lisa Wang",
+    name: "Dr. Priya Sharma",
     role: "Research Associate",
-    bio: "Focuses on innovative research methodologies and emerging trends.",
-    initials: "LW",
-  },
-  {
-    name: "Robert Kim",
-    role: "Project Coordinator",
-    bio: "Ensures seamless execution of multi-stakeholder initiatives.",
-    initials: "RK",
+    bio: "Expertise in biostatistics and health economics evaluation.",
+    initials: "PS",
   },
 ];
 
-const advisors = [
+const operationsTeam = [
   {
-    name: "Prof. Margaret Sullivan",
-    role: "Strategic Advisor",
-    affiliation: "Former University Dean",
-    initials: "MS",
+    name: "Mr. Rajesh Kumar",
+    role: "Project Coordinator",
+    bio: "Oversees day-to-day project operations and multi-site coordination.",
+    initials: "RK",
   },
   {
-    name: "Dr. Richard Hayes",
-    role: "Technical Advisor",
-    affiliation: "Industry Expert",
-    initials: "RH",
+    name: "Ms. Anjali Nair",
+    role: "Data Manager",
+    bio: "Manages data collection, quality assurance, and database administration.",
+    initials: "AN",
   },
   {
-    name: "Jennifer Clarke",
-    role: "Board Member",
-    affiliation: "Nonprofit Leadership",
-    initials: "JC",
+    name: "Ms. Deepa Menon",
+    role: "Research Nurse",
+    bio: "Clinical data collection and patient-family liaison.",
+    initials: "DM",
+  },
+];
+
+const administrationTeam = [
+  {
+    name: "Dr. Avinash Shetty",
+    role: "Department Head",
+    affiliation: "Department of Palliative Medicine, KMC Manipal",
+    initials: "AS",
+  },
+  {
+    name: "Dr. Vikram Rao",
+    role: "ICU Director",
+    affiliation: "Department of Critical Care Medicine, KMC Manipal",
+    initials: "VR",
+  },
+  {
+    name: "Prof. Shobha Ullas",
+    role: "Research Advisor",
+    affiliation: "MAHE Research Committee",
+    initials: "SU",
   },
 ];
 
@@ -86,33 +86,71 @@ const Team = () => {
         <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground animate-slide-up">
-              Meet Our <span className="text-secondary">Team</span>
+              Research <span className="text-secondary">Team</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
-              Our diverse team of experts brings together decades of experience 
-              in research, analysis, and strategic development.
+              Meet the dedicated professionals driving the MCACP ICU Palliative Care 
+              Research Project forward.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Core Team */}
+      {/* Principal Investigator */}
       <section className="section-padding">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Core <span className="text-gradient">Team</span>
+              Principal <span className="text-gradient">Investigator</span>
+            </h2>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <div className="p-8 bg-card rounded-2xl card-hover border border-border text-center">
+              <div className="w-28 h-28 mx-auto rounded-full hero-gradient flex items-center justify-center mb-6 ring-4 ring-secondary/30">
+                <span className="text-3xl font-display font-bold text-primary-foreground">
+                  {principalInvestigator.initials}
+                </span>
+              </div>
+              <h3 className="text-2xl font-display font-semibold text-foreground">
+                {principalInvestigator.name}
+              </h3>
+              <p className="text-secondary font-medium text-lg mb-2">
+                {principalInvestigator.role}
+              </p>
+              <p className="text-muted-foreground mb-1">{principalInvestigator.affiliation}</p>
+              <p className="text-muted-foreground text-sm mb-4">
+                {principalInvestigator.institution}
+              </p>
+              <p className="text-muted-foreground leading-relaxed">{principalInvestigator.bio}</p>
+              <div className="mt-6">
+                <Button variant="ghost" size="sm">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Contact
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Team */}
+      <section className="section-padding bg-muted">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Research <span className="text-gradient">Team</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The dedicated professionals driving our mission forward.
+              Core investigators and researchers driving the scientific aspects of the study.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {researchTeam.map((member, index) => (
               <div
                 key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border text-center group"
+                className="p-6 bg-card rounded-xl card-hover border border-border text-center"
               >
                 <div className="w-20 h-20 mx-auto rounded-full hero-gradient flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   <span className="text-2xl font-display font-bold text-primary-foreground">
@@ -124,63 +162,89 @@ const Team = () => {
                 </h3>
                 <p className="text-secondary font-medium text-sm mb-3">{member.role}</p>
                 <p className="text-sm text-muted-foreground">{member.bio}</p>
-                <div className="mt-4 flex justify-center gap-2">
-                  <Button variant="ghost" size="icon" className="w-8 h-8">
-                    <Mail className="w-4 h-4" />
-                  </Button>
-                  <Button variant="ghost" size="icon" className="w-8 h-8">
-                    <Linkedin className="w-4 h-4" />
-                  </Button>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Advisory Board */}
+      {/* Operations & Implementation Team */}
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Operations & <span className="text-gradient">Implementation</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The team ensuring smooth project execution and data quality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {operationsTeam.map((member, index) => (
+              <div
+                key={index}
+                className="p-6 bg-card rounded-xl card-hover border border-border text-center"
+              >
+                <div className="w-20 h-20 mx-auto rounded-full bg-muted flex items-center justify-center mb-4 ring-2 ring-border">
+                  <span className="text-2xl font-display font-bold text-primary">
+                    {member.initials}
+                  </span>
+                </div>
+                <h3 className="text-lg font-display font-semibold text-foreground">
+                  {member.name}
+                </h3>
+                <p className="text-secondary font-medium text-sm mb-3">{member.role}</p>
+                <p className="text-sm text-muted-foreground">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Administration & Governance */}
       <section className="section-padding bg-muted">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Advisory <span className="text-gradient">Board</span>
+              Administration & <span className="text-gradient">Governance</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Experienced leaders providing strategic guidance and expertise.
+              Senior leadership providing strategic guidance and institutional oversight.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {advisors.map((advisor, index) => (
+            {administrationTeam.map((member, index) => (
               <div
                 key={index}
                 className="p-8 bg-card rounded-xl card-hover border border-border text-center"
               >
                 <div className="w-24 h-24 mx-auto rounded-full bg-muted flex items-center justify-center mb-4 ring-4 ring-primary/20">
                   <span className="text-2xl font-display font-bold text-primary">
-                    {advisor.initials}
+                    {member.initials}
                   </span>
                 </div>
                 <h3 className="text-xl font-display font-semibold text-foreground">
-                  {advisor.name}
+                  {member.name}
                 </h3>
-                <p className="text-secondary font-medium mb-2">{advisor.role}</p>
-                <p className="text-sm text-muted-foreground">{advisor.affiliation}</p>
+                <p className="text-secondary font-medium mb-2">{member.role}</p>
+                <p className="text-sm text-muted-foreground">{member.affiliation}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Join Us CTA */}
+      {/* Contact CTA */}
       <section className="section-padding hero-gradient">
         <div className="container mx-auto container-padding text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground">
-            Join Our Team
+            Interested in Collaboration?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            We're always looking for talented individuals who share our passion 
-            for research and impact. Explore opportunities to work with us.
+            We welcome academic and clinical collaborations. Contact us to discuss 
+            research partnerships and opportunities.
           </p>
           <Button size="lg" variant="secondary" className="mt-8" asChild>
             <Link to="/contact">

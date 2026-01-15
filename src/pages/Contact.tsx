@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,32 +8,32 @@ import Layout from "@/components/layout/Layout";
 
 const contactInfo = [
   {
+    icon: Building2,
+    title: "Department",
+    details: "Department of Palliative Medicine and Supportive Care",
+    description: "Kasturba Medical College, Manipal",
+    href: "#",
+  },
+  {
+    icon: MapPin,
+    title: "Address",
+    details: "Kasturba Medical College",
+    description: "Manipal, Karnataka 576104, India",
+    href: "#",
+  },
+  {
     icon: Mail,
     title: "Email",
-    details: "info@mcacp.org",
-    description: "Send us an email anytime",
-    href: "mailto:info@mcacp.org",
+    details: "palliativecare@manipal.edu",
+    description: "For academic inquiries",
+    href: "mailto:palliativecare@manipal.edu",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: "+1 (234) 567-890",
-    description: "Mon-Fri from 9am to 5pm",
-    href: "tel:+1234567890",
-  },
-  {
-    icon: MapPin,
-    title: "Office",
-    details: "123 Innovation Drive",
-    description: "Research City, RC 12345",
-    href: "#",
-  },
-  {
-    icon: Clock,
-    title: "Hours",
-    details: "Monday - Friday",
-    description: "9:00 AM - 5:00 PM EST",
-    href: "#",
+    details: "+91 820 2922450",
+    description: "Department Office",
+    href: "tel:+918202922450",
   },
 ];
 
@@ -42,6 +42,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    affiliation: "",
     subject: "",
     message: "",
   });
@@ -61,10 +62,10 @@ const Contact = () => {
 
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
+      description: "Thank you for your inquiry. Our team will respond shortly.",
     });
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", affiliation: "", subject: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -78,11 +79,11 @@ const Contact = () => {
         <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground animate-slide-up">
-              Get in <span className="text-secondary">Touch</span>
+              Contact <span className="text-secondary">Us</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
-              Have questions or want to collaborate? We'd love to hear from you. 
-              Reach out and let's start a conversation.
+              For academic inquiries, clinical collaboration, or research partnership 
+              opportunities, please reach out to our team.
             </p>
           </div>
         </div>
@@ -119,24 +120,25 @@ const Contact = () => {
             {/* Form */}
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-                Send Us a <span className="text-gradient">Message</span>
+                Send an <span className="text-gradient">Inquiry</span>
               </h2>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Complete the form below for academic collaboration, research inquiries, 
+                or institutional partnership requests.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Your Name
+                      Full Name
                     </label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Dr. John Doe"
                       required
                     />
                   </div>
@@ -150,10 +152,24 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="john.doe@institution.edu"
                       required
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label htmlFor="affiliation" className="block text-sm font-medium text-foreground mb-2">
+                    Institution / Affiliation
+                  </label>
+                  <Input
+                    id="affiliation"
+                    name="affiliation"
+                    value={formData.affiliation}
+                    onChange={handleChange}
+                    placeholder="University / Hospital / Organization"
+                    required
+                  />
                 </div>
 
                 <div>
@@ -165,7 +181,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="How can we help?"
+                    placeholder="Research collaboration inquiry"
                     required
                   />
                 </div>
@@ -179,7 +195,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder="Please describe your inquiry or collaboration interest..."
                     rows={6}
                     required
                   />
@@ -190,7 +206,7 @@ const Contact = () => {
                     "Sending..."
                   ) : (
                     <>
-                      Send Message
+                      Send Inquiry
                       <Send className="ml-2 w-5 h-5" />
                     </>
                   )}
@@ -198,16 +214,21 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Map / Additional Info */}
+            {/* Institution Info */}
             <div className="space-y-8">
               <div className="aspect-[4/3] rounded-2xl hero-gradient overflow-hidden relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-primary-foreground p-8">
                     <MapPin className="w-12 h-12 mx-auto mb-4" />
-                    <h3 className="text-2xl font-display font-semibold mb-2">Visit Our Office</h3>
+                    <h3 className="text-2xl font-display font-semibold mb-2">
+                      Kasturba Medical College
+                    </h3>
                     <p className="text-primary-foreground/80">
-                      123 Innovation Drive<br />
-                      Research City, RC 12345
+                      Manipal Academy of Higher Education
+                      <br />
+                      Manipal, Karnataka 576104
+                      <br />
+                      India
                     </p>
                   </div>
                 </div>
@@ -215,16 +236,31 @@ const Contact = () => {
 
               <div className="p-6 bg-muted rounded-xl">
                 <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Quick Response
+                  Principal Investigator
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  We typically respond to inquiries within 24-48 business hours. 
-                  For urgent matters, please call us directly.
+                <p className="text-muted-foreground mb-2">
+                  <strong className="text-foreground">Dr. Naveen Salins</strong>
+                </p>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Professor, Department of Palliative Medicine and Supportive Care
+                  <br />
+                  Kasturba Medical College, Manipal, MAHE
                 </p>
                 <div className="flex items-center gap-2 text-primary font-medium">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:palliativecare@manipal.edu">palliativecare@manipal.edu</a>
                 </div>
+              </div>
+
+              <div className="p-6 bg-muted rounded-xl">
+                <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                  Response Time
+                </h3>
+                <p className="text-muted-foreground">
+                  We typically respond to academic and collaboration inquiries within 
+                  3-5 business days. For urgent matters, please indicate the urgency 
+                  in your subject line.
+                </p>
               </div>
             </div>
           </div>
