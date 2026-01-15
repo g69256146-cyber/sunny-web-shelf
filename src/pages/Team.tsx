@@ -14,7 +14,7 @@ const principalInvestigator = {
 
 const researchTeam = [
   {
-    name: "Dr. Anuja Damani",
+    name: "Ashmitha",
     role: "Co-Investigator",
     bio: "Specialist in palliative care research methodology and patient outcomes assessment.",
     initials: "AD",
