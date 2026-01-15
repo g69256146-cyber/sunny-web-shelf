@@ -15,63 +15,69 @@ const principalInvestigator = {
 const researchTeam = [
   {
     name: "Ashmitha",
-    role: "Co-Investigator",
-    bio: "Specialist in palliative care research methodology and patient outcomes assessment.",
-    initials: "AD",
+    role: "Project Research Scientist",
+    bio: "Responsible for supporting study implementation, data collection, and research analysis activities.",
+    initials: "A",
   },
   {
-    name: "Dr. Sunil Rao",
-    role: "Research Fellow",
-    bio: "Focus on mixed-methods research and qualitative data analysis.",
-    initials: "SR",
+    name: "Aparna Nanda",
+    role: "Project Research Scientist",
+    bio: "Contributes to research coordination, participant-level data processes, and outcome assessment.",
+    initials: "AN",
   },
   {
-    name: "Dr. Priya Sharma",
-    role: "Research Associate",
-    bio: "Expertise in biostatistics and health economics evaluation.",
-    initials: "PS",
+    name: "Anusha",
+    role: "Data Management and Reporting Coordinator",
+    bio: "Oversees data integrity, database management, and preparation of study reports and summaries.",
+    initials: "A",
   },
 ];
 
 const operationsTeam = [
   {
-    name: "Mr. Rajesh Kumar",
-    role: "Project Coordinator",
-    bio: "Oversees day-to-day project operations and multi-site coordination.",
-    initials: "RK",
+    name: "Akshatha",
+    role: "Training Program Coordinator",
+    bio: "Leads planning and delivery of training programs for clinical and project staff across study sites.",
+    initials: "AK",
   },
   {
-    name: "Ms. Anjali Nair",
-    role: "Data Manager",
-    bio: "Manages data collection, quality assurance, and database administration.",
-    initials: "AN",
+    name: "Subhashchandra",
+    role: "Project Site Implementation Lead (Support)",
+    bio: "Supports on-site implementation, coordination, and adherence to study protocols.",
+    initials: "SC",
   },
   {
-    name: "Ms. Deepa Menon",
-    role: "Research Nurse",
-    bio: "Clinical data collection and patient-family liaison.",
-    initials: "DM",
+    name: "Prasanna Naik",
+    role: "Project Technical Support III / Social Worker",
+    bio: "Provides technical and psychosocial support to facilitate patient- and family-centered care processes.",
+    initials: "PN",
+  },
+  {
+    name: "Stacy Mendonca",
+    role: "Communication Liaison",
+    bio: "Coordinates internal and external communication to support stakeholder engagement and dissemination.",
+    initials: "SM",
+  },
+  {
+    name: "Gauthami",
+    role: "Digital Liaison",
+    bio: "Manages digital coordination, online resources, and technology-supported project communication.",
+    initials: "G",
   },
 ];
 
 const administrationTeam = [
   {
-    name: "Dr. Avinash Shetty",
-    role: "Department Head",
+    name: "Harsha",
+    role: "Ethics and Regulatory Documentation Officer",
     affiliation: "Department of Palliative Medicine, KMC Manipal",
-    initials: "AS",
+    initials: "H",
   },
   {
-    name: "Dr. Vikram Rao",
-    role: "ICU Director",
-    affiliation: "Department of Critical Care Medicine, KMC Manipal",
-    initials: "VR",
-  },
-  {
-    name: "Prof. Shobha Ullas",
-    role: "Research Advisor",
-    affiliation: "MAHE Research Committee",
-    initials: "SU",
+    name: "Pooja Naik",
+    role: "Finance and Administrative Officer",
+    affiliation: "MCACP ICU Palliative Care Research Project",
+    initials: "PN",
   },
 ];
 
