@@ -81,6 +81,108 @@ const administrationTeam = [
   },
 ];
 
+const clinicalSiteInvestigators = [
+  {
+    institution: "Kasturba Medical College Manipal",
+    name: "Dr Naveen Salins",
+    role: "Principal Investigator",
+    position: "Professor and Head, Department of Palliative Medicine and Supportive Care",
+    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
+    email: "naveen.salins@manipal.edu",
+    initials: "NS",
+  },
+  {
+    institution: "Kasturba Medical College Manipal",
+    name: "Dr Arun Ghoshal",
+    role: "Co-Principal Investigator",
+    position: "Assistant Professor, Department of Palliative Medicine and Supportive Care",
+    expertise: ["Palliative Care Research", "Palliative Care Education"],
+    email: "arun.ghoshal@manipal.edu",
+    initials: "AG",
+  },
+  {
+    institution: "AIIMS Delhi",
+    name: "Dr Seema Mishra",
+    role: "Co-Principal Investigator",
+    position: "Professor and Head, Department of Onco-Anaesthesia and Palliative Medicine, Dr. B.R. Ambedkar IRCH and NCI Jhajjar",
+    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
+    email: "seemamishra2003@gmail.com",
+    initials: "SM",
+  },
+  {
+    institution: "CMC Vellore",
+    name: "Dr Jenifer Jeba Sundararaj",
+    role: "Co-Principal Investigator",
+    position: "Professor and Head, Department of Palliative Medicine",
+    expertise: ["Palliative Care", "Health Research", "Public Policy"],
+    email: "jenifermugesh@yahoo.com",
+    initials: "JJS",
+  },
+  {
+    institution: "Tata Memorial Hospital Mumbai",
+    name: "Dr Sheila Nainan Myatra",
+    role: "Co-Principal Investigator",
+    position: "Professor, Department of Anaesthesiology, Critical Care and Pain",
+    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
+    email: "sheila150@hotmail.com",
+    initials: "SNM",
+  },
+  {
+    institution: "Bharati Vidyapeeth Deemed University Pune",
+    name: "Dr Shivakumar Iyer",
+    role: "Co-Principal Investigator",
+    position: "Professor and Head, Department of Critical Care Medicine",
+    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
+    email: "suchetashiva@gmail.com",
+    initials: "SI",
+  },
+  {
+    institution: "P. D. Hinduja Hospital Mumbai",
+    name: "Dr Roop Gursahani",
+    role: "Co-Investigator",
+    position: "Consultant Neurologist",
+    expertise: ["Neurology", "ICU Palliative Care", "Health Research"],
+    email: "roop_gursahani@hotmail.com",
+    initials: "RG",
+  },
+  {
+    institution: "St John's Medical College Hospital Bangalore",
+    name: "Dr Nandini Vallath",
+    role: "Co-Principal Investigator",
+    position: "Professor and Head, Department of Pain and Palliative Medicine",
+    expertise: ["ICU Palliative Care", "Health Research"],
+    email: "aanandini@gmail.com",
+    initials: "NV",
+  },
+  {
+    institution: "Vardhaman Mahavir Medical College & Safdarjung Hospital Delhi",
+    name: "Dr Anirban Hom Choudhuri",
+    role: "Co-Principal Investigator",
+    position: "Director, Professor & Head, Department of Critical Care Medicine",
+    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
+    email: "anirban.homchoudhuri@gmail.com",
+    initials: "AHC",
+  },
+  {
+    institution: "Aster CMI Hospital Bengaluru",
+    name: "Dr Raghavendra Ramanjulu",
+    role: "Co-Principal Investigator",
+    position: "Head, Department of Pain and Palliative Medicine",
+    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
+    email: "drragraj1@gmail.com",
+    initials: "RR",
+  },
+  {
+    institution: "Yashoda Super-speciality Hospital Kaushambi Ghaziabad",
+    name: "Dr Raj Kumar Mani",
+    role: "Co-Principal Investigator",
+    position: "Chairman, Department of Critical Care and Pulmonology",
+    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
+    email: "raj.rkmjs@gmail.com",
+    initials: "RKM",
+  },
+];
+
 const Team = () => {
   return (
     <Layout>
@@ -236,6 +338,66 @@ const Team = () => {
                 </h3>
                 <p className="text-secondary font-medium mb-2">{member.role}</p>
                 <p className="text-sm text-muted-foreground">{member.affiliation}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Site Investigators */}
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Clinical Site <span className="text-gradient">Investigators</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Principal and Co-Investigators from participating clinical sites across India.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clinicalSiteInvestigators.map((investigator, index) => (
+              <div
+                key={index}
+                className="p-6 bg-card rounded-xl card-hover border border-border"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 flex-shrink-0 rounded-full hero-gradient flex items-center justify-center">
+                    <span className="text-lg font-display font-bold text-primary-foreground">
+                      {investigator.initials}
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-display font-semibold text-foreground">
+                      {investigator.name}
+                    </h3>
+                    <p className="text-secondary font-medium text-sm">{investigator.role}</p>
+                  </div>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-sm text-muted-foreground font-medium">
+                    {investigator.institution}
+                  </p>
+                  <p className="text-xs text-muted-foreground">{investigator.position}</p>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {investigator.expertise.map((exp, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground"
+                      >
+                        {exp}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={`mailto:${investigator.email}`}
+                    className="inline-flex items-center text-xs text-primary hover:underline mt-2"
+                  >
+                    <Mail className="w-3 h-3 mr-1" />
+                    {investigator.email}
+                  </a>
+                </div>
               </div>
             ))}
           </div>
