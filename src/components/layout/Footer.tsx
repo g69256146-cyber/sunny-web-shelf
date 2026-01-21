@@ -68,22 +68,22 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-primary-foreground/70">
+            <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-secondary" />
                 <a
-                  href="mailto:palliativecare@manipal.edu"
+                  href="mailto:arun.ghoshal@manipal.edu"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  palliativecare@manipal.edu
+                  arun.ghoshal@manipal.edu
                 </a>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Phone className="w-4 h-4 text-secondary" />
                 <a
-                  href="tel:+918202922450"
+                  href="tel:+918202922221"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  +91 820 2922450
+                  0820 292 2221
                 </a>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
