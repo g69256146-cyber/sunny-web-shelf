@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    details: "Kasturba Medical College",
-    description: "Manipal, Karnataka 576104, India",
+    details: "Manipal Hospice and Respite Centre",
+    description: "Kollalagiri-Bhandsalley Road, Banabettu, Havanje, Udupi, Karnataka 576124",
     href: "#",
   },
   {
@@ -221,14 +221,14 @@ const Contact = () => {
                   <div className="text-center text-primary-foreground p-8">
                     <MapPin className="w-12 h-12 mx-auto mb-4" />
                     <h3 className="text-2xl font-display font-semibold mb-2">
-                      Kasturba Medical College
+                      Manipal Hospice and Respite Centre
                     </h3>
                     <p className="text-primary-foreground/80">
-                      Manipal Academy of Higher Education
+                      Kollalagiri-Bhandsalley Road (9QQQ+VV)
                       <br />
-                      Manipal, Karnataka 576104
+                      Banabettu, Havanje, Udupi
                       <br />
-                      India
+                      Karnataka 576124, India
                     </p>
                   </div>
                 </div>
