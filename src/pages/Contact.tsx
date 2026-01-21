@@ -24,16 +24,16 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "palliativecare@manipal.edu",
+    details: "arun.ghoshal@manipal.edu",
     description: "For academic inquiries",
-    href: "mailto:palliativecare@manipal.edu",
+    href: "mailto:arun.ghoshal@manipal.edu",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: "+91 820 2922450",
+    details: "0820 292 2221",
     description: "Department Office",
-    href: "tel:+918202922450",
+    href: "tel:+918202922221",
   },
 ];
 
@@ -246,9 +246,9 @@ const Contact = () => {
                   <br />
                   Kasturba Medical College, Manipal, MAHE
                 </p>
-                <div className="flex items-center gap-2 text-primary font-medium">
+              <div className="flex items-center gap-2 text-primary font-medium">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:palliativecare@manipal.edu">palliativecare@manipal.edu</a>
+                  <a href="mailto:arun.ghoshal@manipal.edu">arun.ghoshal@manipal.edu</a>
                 </div>
               </div>
 
