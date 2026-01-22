@@ -64,6 +64,12 @@ const operationsTeam = [
     bio: "Manages digital coordination, online resources, and technology-supported project communication.",
     initials: "G",
   },
+  {
+    name: "Chithra",
+    role: "Office Helper",
+    bio: "Provides essential office support to ensure smooth day-to-day project operations.",
+    initials: "C",
+  },
 ];
 
 const administrationTeam = [
