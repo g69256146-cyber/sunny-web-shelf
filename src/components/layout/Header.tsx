@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-display font-semibold text-lg text-foreground leading-tight">
-                MCACP
+                MATHRU
               </span>
               <span className="text-xs text-muted-foreground hidden sm:block">
                 ICU Palliative Care Research

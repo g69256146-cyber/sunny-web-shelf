@@ -47,7 +47,7 @@ const About = () => {
               About the <span className="text-secondary">Study</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
-              Understanding the background, rationale, and design of the MCACP 
+              Understanding the background, rationale, and design of the MATHRU 
               ICU Palliative Care Research Project.
             </p>
           </div>
@@ -91,7 +91,7 @@ const About = () => {
                 in India.
               </p>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                The MCACP study addresses this gap by evaluating a structured approach 
+                The MATHRU study addresses this gap by evaluating a structured approach
                 to integrating palliative and supportive care within ICU settings. This 
                 implementation-focused research aims to generate evidence that can guide 
                 clinical practice and healthcare policy.

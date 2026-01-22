@@ -50,7 +50,7 @@ const Index = () => {
               Department of Palliative Medicine and Supportive Care, KMC Manipal
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-primary-foreground leading-tight animate-slide-up">
-              MCACP
+              MATHRU
               <br />
               <span className="text-secondary">ICU Palliative Care</span>
               <br />
@@ -118,7 +118,7 @@ const Index = () => {
                 Project <span className="text-gradient">Overview</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                The MCACP (Multifaceted, Comprehensive, Appropriate Care Package) study 
+                The MATHRU (Multifaceted, Appropriate, Transdisciplinary, Holistic, Realistic, Understandable) study
                 is an implementation-focused clinical research initiative conducted by the 
                 Department of Palliative Medicine and Supportive Care, Kasturba Medical College, 
                 Manipal, under the Manipal Academy of Higher Education (MAHE).
