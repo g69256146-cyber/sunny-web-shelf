@@ -81,7 +81,7 @@ const publications = [
     year: "2024",
   },
   {
-    title: "MCACP Study Protocol: Implementation of Structured Palliative Care in ICU",
+    title: "MATHRU Study Protocol: Implementation of Structured Palliative Care in ICU",
     journal: "BMC Palliative Care",
     status: "Under Review",
     year: "2024",
@@ -103,7 +103,7 @@ const Outputs = () => {
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
               Access study protocols, reports, publications, and research documents 
-              from the MCACP ICU Palliative Care Research Project.
+              from the MATHRU ICU Palliative Care Research Project.
             </p>
           </div>
         </div>

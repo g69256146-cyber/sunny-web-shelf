@@ -82,7 +82,7 @@ const administrationTeam = [
   {
     name: "Pooja Naik",
     role: "Finance and Administrative Officer",
-    affiliation: "MCACP ICU Palliative Care Research Project",
+    affiliation: "MATHRU ICU Palliative Care Research Project",
     initials: "PN",
   },
 ];
@@ -203,7 +203,7 @@ const Team = () => {
               Research <span className="text-secondary">Team</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
-              Meet the dedicated professionals driving the MCACP ICU Palliative Care 
+              Meet the dedicated professionals driving the MATHRU ICU Palliative Care 
               Research Project forward.
             </p>
           </div>

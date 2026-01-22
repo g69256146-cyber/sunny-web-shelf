@@ -13,7 +13,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-display font-bold text-lg">M</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-semibold text-xl">MCACP</span>
+                <span className="font-display font-semibold text-xl">MATHRU</span>
                 <span className="text-xs text-primary-foreground/70">
                   ICU Palliative Care Research
                 </span>
@@ -129,7 +129,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-primary-foreground/50 text-sm">
-            <p>© {new Date().getFullYear()} MCACP Research Project. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} MATHRU Research Project. All rights reserved.</p>
             <p>Manipal Academy of Higher Education (MAHE)</p>
           </div>
         </div>
