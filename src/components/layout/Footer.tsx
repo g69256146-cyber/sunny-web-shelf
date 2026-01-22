@@ -89,11 +89,13 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-secondary mt-1" />
                 <span>
-                  Kasturba Medical College
+                  Manipal Hospice and Respite Centre
                   <br />
-                  Manipal, Karnataka 576104
+                  Kollalagiri-Bhandsalley Road
                   <br />
-                  India
+                  Banabettu, Havanje, Udupi
+                  <br />
+                  Karnataka 576124, India
                 </span>
               </li>
             </ul>
