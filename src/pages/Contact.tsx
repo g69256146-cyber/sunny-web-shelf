@@ -232,20 +232,41 @@ const Contact = () => {
 
             {/* Institution Info */}
             <div className="space-y-8">
-              <div className="aspect-[4/3] rounded-2xl hero-gradient overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-primary-foreground p-8">
-                    <MapPin className="w-12 h-12 mx-auto mb-4" />
-                    <h3 className="text-2xl font-display font-semibold mb-2">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.123456789!2d74.7891!3d13.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDIwJzQ0LjIiTiA3NMKwNDcnMjAuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Manipal Hospice and Respite Centre Location"
+                />
+              </div>
+              
+              <div className="p-4 bg-muted rounded-xl">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-secondary mt-0.5" />
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground">
                       Manipal Hospice and Respite Centre
                     </h3>
-                    <p className="text-primary-foreground/80">
+                    <p className="text-sm text-muted-foreground">
                       Kollalagiri-Bhandsalley Road (9QQQ+VV)
                       <br />
                       Banabettu, Havanje, Udupi
                       <br />
                       Karnataka 576124, India
                     </p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=9QQQ%2BVV+Udupi+Karnataka+India"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm text-primary hover:underline mt-2"
+                    >
+                      Open in Google Maps →
+                    </a>
                   </div>
                 </div>
               </div>
