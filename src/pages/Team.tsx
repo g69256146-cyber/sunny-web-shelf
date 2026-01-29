@@ -31,6 +31,12 @@ const researchTeam = [
     bio: "Oversees data integrity, database management, and preparation of study reports and summaries.",
     initials: "A",
   },
+  {
+    name: "Sowmya",
+    role: "Qualitative Research",
+    bio: "Supports qualitative research activities, data analysis, and thematic interpretation.",
+    initials: "S",
+  },
 ];
 
 const operationsTeam = [
