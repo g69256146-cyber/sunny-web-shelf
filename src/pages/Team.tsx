@@ -33,7 +33,7 @@ const researchTeam = [
   },
   {
     name: "Sowmya",
-    role: "Qualitative Research",
+    role: "Qualitative Research Coordinator",
     bio: "Supports qualitative research activities, data analysis, and thematic interpretation.",
     initials: "S",
   },
