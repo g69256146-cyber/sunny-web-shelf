@@ -102,6 +102,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
     email: "naveen.salins@manipal.edu",
     initials: "NS",
+    associate: {
+      name: "Mr. Prasanna Naik",
+      email: "",
+      phone: "9743907407",
+    },
   },
   {
     institution: "Kasturba Medical College Manipal",
@@ -120,6 +125,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
     email: "seemamishra2003@gmail.com",
     initials: "SM",
+    associate: {
+      name: "Dr. Raghav Gupta",
+      email: "raghavgupta88@gmail.com",
+      phone: "",
+    },
   },
   {
     institution: "CMC Vellore",
@@ -129,6 +139,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Palliative Care", "Health Research", "Public Policy"],
     email: "jenifermugesh@yahoo.com",
     initials: "JJS",
+    associate: {
+      name: "Dr. Jyothsna Kuriakose",
+      email: "jyothsna.kuriakose@cmcvellore.ac.in",
+      phone: "9605538456",
+    },
   },
   {
     institution: "Tata Memorial Hospital Mumbai",
@@ -138,6 +153,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
     email: "sheila150@hotmail.com",
     initials: "SNM",
+    associate: {
+      name: "Dr. Anjana Shrivastava",
+      email: "dranjanashrivastava@gmail.com",
+      phone: "9820401867",
+    },
   },
   {
     institution: "Bharati Vidyapeeth Deemed University Pune",
@@ -147,6 +167,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "suchetashiva@gmail.com",
     initials: "SI",
+    associate: {
+      name: "Dr. Rutula",
+      email: "drrutula@gmail.com",
+      phone: "8149990072",
+    },
   },
   {
     institution: "P. D. Hinduja Hospital Mumbai",
@@ -156,6 +181,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Neurology", "ICU Palliative Care", "Health Research"],
     email: "roop_gursahani@hotmail.com",
     initials: "RG",
+    associate: {
+      name: "Dr. Smriti Khanna",
+      email: "smriti.umesh.khanna@gmail.com",
+      phone: "9892008228",
+    },
   },
   {
     institution: "St John's Medical College Hospital Bangalore",
@@ -165,6 +195,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research"],
     email: "aanandini@gmail.com",
     initials: "NV",
+    associate: {
+      name: "Dr. Mathangi Krishnakumar",
+      email: "mathangi.krishnakumar@stjohns.in",
+      phone: "9764062212",
+    },
   },
   {
     institution: "Vardhaman Mahavir Medical College & Safdarjung Hospital Delhi",
@@ -174,6 +209,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "anirban.homchoudhuri@gmail.com",
     initials: "AHC",
+    associate: {
+      name: "Dr. Geetika Khanna",
+      email: "principal@vmmc-sjh.nic.in",
+      phone: "9911332802",
+    },
   },
   {
     institution: "Aster CMI Hospital Bengaluru",
@@ -183,6 +223,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "drragraj1@gmail.com",
     initials: "RR",
+    associate: {
+      name: "Dr. Surinder Kher",
+      email: "surinder.kher@asterhospital.in",
+      phone: "9900503671",
+    },
   },
   {
     institution: "Yashoda Super-speciality Hospital Kaushambi Ghaziabad",
@@ -409,6 +454,27 @@ const Team = () => {
                     <Mail className="w-3 h-3 mr-1" />
                     {investigator.email}
                   </a>
+                  
+                  {investigator.associate && (
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <p className="text-xs font-medium text-muted-foreground mb-2">Associate:</p>
+                      <p className="text-sm font-medium text-foreground">{investigator.associate.name}</p>
+                      {investigator.associate.email && (
+                        <a
+                          href={`mailto:${investigator.associate.email}`}
+                          className="inline-flex items-center text-xs text-primary hover:underline"
+                        >
+                          <Mail className="w-3 h-3 mr-1" />
+                          {investigator.associate.email}
+                        </a>
+                      )}
+                      {investigator.associate.phone && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Phone: {investigator.associate.phone}
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
