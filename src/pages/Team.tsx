@@ -1,275 +1,19 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
+ import { Link } from "react-router-dom";
+ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-
-const principalInvestigator = {
-  name: "Dr. Naveen Salins",
-  role: "Principal Investigator",
-  affiliation: "Professor, Department of Palliative Medicine and Supportive Care",
-  institution: "Kasturba Medical College, Manipal, MAHE",
-  bio: "Leading expert in palliative medicine with extensive experience in clinical research and healthcare policy development.",
-  initials: "NS",
-};
-
-const researchTeam = [
-  {
-    name: "Ashmitha",
-    role: "Project Research Scientist",
-    bio: "Responsible for supporting study implementation, data collection, and research analysis activities.",
-    initials: "A",
-  },
-  {
-    name: "Aparna Nanda",
-    role: "Project Research Scientist",
-    bio: "Contributes to research coordination, participant-level data processes, and outcome assessment.",
-    initials: "AN",
-  },
-  {
-    name: "Anusha",
-    role: "Data Management and Reporting Coordinator",
-    bio: "Oversees data integrity, database management, and preparation of study reports and summaries.",
-    initials: "A",
-  },
-  {
-    name: "Sowmya",
-    role: "Qualitative Research Coordinator",
-    bio: "Supports qualitative research activities, data analysis, and thematic interpretation.",
-    initials: "S",
-  },
-];
-
-const operationsTeam = [
-  {
-    name: "Akshatha",
-    role: "Training Program Coordinator",
-    bio: "Leads planning and delivery of training programs for clinical and project staff across study sites.",
-    initials: "AK",
-  },
-  {
-    name: "Subhashchandra",
-    role: "Project Site Implementation Lead (Support)",
-    bio: "Supports on-site implementation, coordination, and adherence to study protocols.",
-    initials: "SC",
-  },
-  {
-    name: "Prasanna Naik",
-    role: "Project Technical Support III / Social Worker",
-    bio: "Provides technical and psychosocial support to facilitate patient- and family-centered care processes.",
-    initials: "PN",
-  },
-  {
-    name: "Stacy Mendonca",
-    role: "Communication Liaison",
-    bio: "Coordinates internal and external communication to support stakeholder engagement and dissemination.",
-    initials: "SM",
-  },
-  {
-    name: "Gauthami",
-    role: "Digital Liaison",
-    bio: "Manages digital coordination, online resources, and technology-supported project communication.",
-    initials: "G",
-  },
-  {
-    name: "Chithra",
-    role: "Office Helper",
-    bio: "Provides essential office support to ensure smooth day-to-day project operations.",
-    initials: "C",
-  },
-];
-
-const administrationTeam = [
-  {
-    name: "Harsha",
-    role: "Ethics and Regulatory Documentation Officer",
-    affiliation: "Department of Palliative Medicine, KMC Manipal",
-    initials: "H",
-  },
-  {
-    name: "Pooja Naik",
-    role: "Finance and Administrative Officer",
-    affiliation: "MATHRU ICU Palliative Care Research Project",
-    initials: "PN",
-  },
-];
-
-const clinicalSiteInvestigators = [
-  {
-    institution: "Kasturba Medical College Manipal",
-    name: "Dr Naveen Salins",
-    role: "Principal Investigator",
-    position: "Professor and Head, Department of Palliative Medicine and Supportive Care",
-    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
-    email: "naveen.salins@manipal.edu",
-    initials: "NS",
-    coPi: {
-      name: "Dr. Arun Ghoshal",
-      email: "arun.ghoshal@manipal.edu",
-      phone: "9434890160",
-    },
-    associate: {
-      name: "Mr. Prasanna Naik",
-      email: "",
-      phone: "9743907407",
-    },
-  },
-  {
-    institution: "AIIMS Delhi",
-    name: "Dr Seema Mishra",
-    role: "Co-Principal Investigator",
-    position: "Professor and Head, Department of Onco-Anaesthesia and Palliative Medicine, Dr. B.R. Ambedkar IRCH and NCI Jhajjar",
-    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
-    email: "seemamishra2003@gmail.com",
-    initials: "SM",
-    associate: {
-      name: "Dr. Raghav Gupta",
-      email: "raghavgupta88@gmail.com",
-      phone: "",
-    },
-  },
-  {
-    institution: "CMC Vellore",
-    name: "Dr Jenifer Jeba Sundararaj",
-    role: "Co-Principal Investigator",
-    position: "Professor and Head, Department of Palliative Medicine",
-    expertise: ["Palliative Care", "Health Research", "Public Policy"],
-    email: "jenifermugesh@yahoo.com",
-    initials: "JJS",
-    coPi: {
-      name: "Dr. Binila Chacko",
-      email: "binilachacko@cmcvellore.ac.in",
-      phone: "9600272412",
-    },
-    associate: {
-      name: "Dr. Jyothsna Kuriakose",
-      email: "jyothsna.kuriakose@cmcvellore.ac.in",
-      phone: "9605538456",
-    },
-  },
-  {
-    institution: "Tata Memorial Hospital Mumbai",
-    name: "Dr Sheila Nainan Myatra",
-    role: "Co-Principal Investigator",
-    position: "Professor, Department of Anaesthesiology, Critical Care and Pain",
-    expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
-    email: "sheila150@hotmail.com",
-    initials: "SNM",
-    coPi: {
-      name: "Ms. Farnaz Shaikh",
-      email: "shkfarnaz@gmail.com",
-      phone: "9967024614",
-    },
-    associate: {
-      name: "Dr. Anjana Shrivastava",
-      email: "dranjanashrivastava@gmail.com",
-      phone: "9820401867",
-    },
-  },
-  {
-    institution: "Bharati Vidyapeeth Deemed University Pune",
-    name: "Dr Shivakumar Iyer",
-    role: "Co-Principal Investigator",
-    position: "Professor and Head, Department of Critical Care Medicine",
-    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
-    email: "suchetashiva@gmail.com",
-    initials: "SI",
-    coPi: {
-      name: "Vikas Govind Munde",
-      email: "vikasmunde010@gmail.com",
-      phone: "9579056920",
-    },
-    associate: {
-      name: "Dr. Rutula",
-      email: "drrutula@gmail.com",
-      phone: "8149990072",
-    },
-  },
-  {
-    institution: "P. D. Hinduja Hospital Mumbai",
-    name: "Dr Roop Gursahani",
-    role: "Co-Investigator",
-    position: "Consultant Neurologist",
-    expertise: ["Neurology", "ICU Palliative Care", "Health Research"],
-    email: "roop_gursahani@hotmail.com",
-    initials: "RG",
-    coPi: {
-      name: "Dr. Farhad Kapadia",
-      email: "dr.fkapadia@hindujahospital.com",
-      phone: "",
-    },
-    associate: {
-      name: "Dr. Smriti Khanna",
-      email: "smriti.umesh.khanna@gmail.com",
-      phone: "9892008228",
-    },
-  },
-  {
-    institution: "St John's Medical College Hospital Bangalore",
-    name: "Dr Nandini Vallath",
-    role: "Co-Principal Investigator",
-    position: "Professor and Head, Department of Pain and Palliative Medicine",
-    expertise: ["ICU Palliative Care", "Health Research"],
-    email: "aanandini@gmail.com",
-    initials: "NV",
-    coPi: {
-      name: "Dr. Havaldhar Amarja Ashok",
-      email: "havaldar.aa@stjohns.in",
-      phone: "9036082112",
-    },
-    associate: {
-      name: "Dr. Mathangi Krishnakumar",
-      email: "mathangi.krishnakumar@stjohns.in",
-      phone: "9764062212",
-    },
-  },
-  {
-    institution: "Vardhaman Mahavir Medical College & Safdarjung Hospital Delhi",
-    name: "Dr Anirban Hom Choudhuri",
-    role: "Co-Principal Investigator",
-    position: "Director, Professor & Head, Department of Critical Care Medicine",
-    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
-    email: "anirban.homchoudhuri@gmail.com",
-    initials: "AHC",
-    coPi: {
-      name: "Dr. Saurav Mitra Mustafi",
-      email: "saurav82in@yahoo.co.in",
-      phone: "9899124943",
-    },
-    associate: {
-      name: "Dr. Geetika Khanna",
-      email: "principal@vmmc-sjh.nic.in",
-      phone: "9911332802",
-    },
-  },
-  {
-    institution: "Aster CMI Hospital Bengaluru",
-    name: "Dr Raghavendra Ramanjulu",
-    role: "Co-Principal Investigator",
-    position: "Head, Department of Pain and Palliative Medicine",
-    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
-    email: "drragraj1@gmail.com",
-    initials: "RR",
-    coPi: {
-      name: "Madam Rajeshwari",
-      email: "rajeshwari@asterhospital.in",
-      phone: "7892988203",
-    },
-    associate: {
-      name: "Dr. Surinder Kher",
-      email: "surinder.kher@asterhospital.in",
-      phone: "9900503671",
-    },
-  },
-  {
-    institution: "Yashoda Super-speciality Hospital Kaushambi Ghaziabad",
-    name: "Dr Raj Kumar Mani",
-    role: "Co-Principal Investigator",
-    position: "Chairman, Department of Critical Care and Pulmonology",
-    expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
-    email: "raj.rkmjs@gmail.com",
-    initials: "RKM",
-  },
-];
+ import {
+   principalInvestigator,
+   researchTeam,
+   operationsTeam,
+   administrationTeam,
+   clinicalSiteInvestigators,
+ } from "@/data/teamData";
+ import PrincipalInvestigatorCard from "@/components/team/PrincipalInvestigatorCard";
+ import TeamMemberCard from "@/components/team/TeamMemberCard";
+ import AdministrationCard from "@/components/team/AdministrationCard";
+ import ClinicalInvestigatorCard from "@/components/team/ClinicalInvestigatorCard";
+ import TeamSection from "@/components/team/TeamSection";
 
 const Team = () => {
   return (
@@ -292,7 +36,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Principal Investigator */}
+      {/* Principal Investigator Section */}
       <section className="section-padding">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -302,237 +46,58 @@ const Team = () => {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="p-8 bg-card rounded-2xl card-hover border border-border text-center">
-              <div className="w-28 h-28 mx-auto rounded-full hero-gradient flex items-center justify-center mb-6 ring-4 ring-secondary/30">
-                <span className="text-3xl font-display font-bold text-primary-foreground">
-                  {principalInvestigator.initials}
-                </span>
-              </div>
-              <h3 className="text-2xl font-display font-semibold text-foreground">
-                {principalInvestigator.name}
-              </h3>
-              <p className="text-secondary font-medium text-lg mb-2">
-                {principalInvestigator.role}
-              </p>
-              <p className="text-muted-foreground mb-1">{principalInvestigator.affiliation}</p>
-              <p className="text-muted-foreground text-sm mb-4">
-                {principalInvestigator.institution}
-              </p>
-              <p className="text-muted-foreground leading-relaxed">{principalInvestigator.bio}</p>
-              <div className="mt-6">
-                <Button variant="ghost" size="sm">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Contact
-                </Button>
-              </div>
-            </div>
+            <PrincipalInvestigatorCard {...principalInvestigator} />
           </div>
         </div>
       </section>
 
-      {/* Research Team */}
-      <section className="section-padding bg-muted">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Research <span className="text-gradient">Team</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Core investigators and researchers driving the scientific aspects of the study.
-            </p>
-          </div>
+      {/* Research Team Section */}
+      <TeamSection
+        title="Research"
+        highlightedWord="Team"
+        description="Core investigators and researchers driving the scientific aspects of the study."
+        className="bg-muted"
+      >
+        {researchTeam.map((member, index) => (
+          <TeamMemberCard key={index} {...member} variant="gradient" />
+        ))}
+      </TeamSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {researchTeam.map((member, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border text-center"
-              >
-                <div className="w-20 h-20 mx-auto rounded-full hero-gradient flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                  <span className="text-2xl font-display font-bold text-primary-foreground">
-                    {member.initials}
-                  </span>
-                </div>
-                <h3 className="text-lg font-display font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-secondary font-medium text-sm mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Operations & Implementation Section */}
+      <TeamSection
+        title="Operations &"
+        highlightedWord="Implementation"
+        description="The team ensuring smooth project execution and data quality."
+      >
+        {operationsTeam.map((member, index) => (
+          <TeamMemberCard key={index} {...member} variant="muted" />
+        ))}
+      </TeamSection>
 
-      {/* Operations & Implementation Team */}
-      <section className="section-padding">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Operations & <span className="text-gradient">Implementation</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              The team ensuring smooth project execution and data quality.
-            </p>
-          </div>
+      {/* Administration & Governance Section */}
+      <TeamSection
+        title="Administration &"
+        highlightedWord="Governance"
+        description="Senior leadership providing strategic guidance and institutional oversight."
+        className="bg-muted"
+        gridClassName="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+      >
+        {administrationTeam.map((member, index) => (
+          <AdministrationCard key={index} {...member} />
+        ))}
+      </TeamSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {operationsTeam.map((member, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border text-center"
-              >
-                <div className="w-20 h-20 mx-auto rounded-full bg-muted flex items-center justify-center mb-4 ring-2 ring-border">
-                  <span className="text-2xl font-display font-bold text-primary">
-                    {member.initials}
-                  </span>
-                </div>
-                <h3 className="text-lg font-display font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-secondary font-medium text-sm mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Administration & Governance */}
-      <section className="section-padding bg-muted">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Administration & <span className="text-gradient">Governance</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Senior leadership providing strategic guidance and institutional oversight.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {administrationTeam.map((member, index) => (
-              <div
-                key={index}
-                className="p-8 bg-card rounded-xl card-hover border border-border text-center"
-              >
-                <div className="w-24 h-24 mx-auto rounded-full bg-muted flex items-center justify-center mb-4 ring-4 ring-primary/20">
-                  <span className="text-2xl font-display font-bold text-primary">
-                    {member.initials}
-                  </span>
-                </div>
-                <h3 className="text-xl font-display font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-secondary font-medium mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.affiliation}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Clinical Site Investigators */}
-      <section className="section-padding">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Clinical Site <span className="text-gradient">Investigators</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Principal and Co-Investigators from participating clinical sites across India.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clinicalSiteInvestigators.map((investigator, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 flex-shrink-0 rounded-full hero-gradient flex items-center justify-center">
-                    <span className="text-lg font-display font-bold text-primary-foreground">
-                      {investigator.initials}
-                    </span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-display font-semibold text-foreground">
-                      {investigator.name}
-                    </h3>
-                    <p className="text-secondary font-medium text-sm">{investigator.role}</p>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-sm text-muted-foreground font-medium">
-                    {investigator.institution}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{investigator.position}</p>
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {investigator.expertise.map((exp, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground"
-                      >
-                        {exp}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={`mailto:${investigator.email}`}
-                    className="inline-flex items-center text-xs text-primary hover:underline mt-2"
-                  >
-                    <Mail className="w-3 h-3 mr-1" />
-                    {investigator.email}
-                  </a>
-                  
-                  {investigator.coPi && (
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <p className="text-xs font-medium text-muted-foreground mb-2">Co-PI:</p>
-                      <p className="text-sm font-medium text-foreground">{investigator.coPi.name}</p>
-                      {investigator.coPi.email && (
-                        <a
-                          href={`mailto:${investigator.coPi.email}`}
-                          className="inline-flex items-center text-xs text-primary hover:underline"
-                        >
-                          <Mail className="w-3 h-3 mr-1" />
-                          {investigator.coPi.email}
-                        </a>
-                      )}
-                      {investigator.coPi.phone && (
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Phone: {investigator.coPi.phone}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
-                  {investigator.associate && (
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <p className="text-xs font-medium text-muted-foreground mb-2">Associate:</p>
-                      <p className="text-sm font-medium text-foreground">{investigator.associate.name}</p>
-                      {investigator.associate.email && (
-                        <a
-                          href={`mailto:${investigator.associate.email}`}
-                          className="inline-flex items-center text-xs text-primary hover:underline"
-                        >
-                          <Mail className="w-3 h-3 mr-1" />
-                          {investigator.associate.email}
-                        </a>
-                      )}
-                      {investigator.associate.phone && (
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Phone: {investigator.associate.phone}
-                        </p>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Clinical Site Investigators Section */}
+      <TeamSection
+        title="Clinical Site"
+        highlightedWord="Investigators"
+        description="Principal and Co-Investigators from participating clinical sites across India."
+        gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {clinicalSiteInvestigators.map((investigator, index) => (
+          <ClinicalInvestigatorCard key={index} investigator={investigator} />
+        ))}
+      </TeamSection>
 
       {/* Contact CTA */}
       <section className="section-padding hero-gradient">
