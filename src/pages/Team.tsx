@@ -102,6 +102,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
     email: "naveen.salins@manipal.edu",
     initials: "NS",
+    coPi: {
+      name: "Dr. Arun Ghoshal",
+      email: "arun.ghoshal@manipal.edu",
+      phone: "9434890160",
+    },
     associate: {
       name: "Mr. Prasanna Naik",
       email: "",
@@ -139,6 +144,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Palliative Care", "Health Research", "Public Policy"],
     email: "jenifermugesh@yahoo.com",
     initials: "JJS",
+    coPi: {
+      name: "Dr. Binila Chacko",
+      email: "binilachacko@cmcvellore.ac.in",
+      phone: "9600272412",
+    },
     associate: {
       name: "Dr. Jyothsna Kuriakose",
       email: "jyothsna.kuriakose@cmcvellore.ac.in",
@@ -153,6 +163,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
     email: "sheila150@hotmail.com",
     initials: "SNM",
+    coPi: {
+      name: "Ms. Farnaz Shaikh",
+      email: "shkfarnaz@gmail.com",
+      phone: "9967024614",
+    },
     associate: {
       name: "Dr. Anjana Shrivastava",
       email: "dranjanashrivastava@gmail.com",
@@ -167,6 +182,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "suchetashiva@gmail.com",
     initials: "SI",
+    coPi: {
+      name: "Vikas Govind Munde",
+      email: "vikasmunde010@gmail.com",
+      phone: "9579056920",
+    },
     associate: {
       name: "Dr. Rutula",
       email: "drrutula@gmail.com",
@@ -181,6 +201,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Neurology", "ICU Palliative Care", "Health Research"],
     email: "roop_gursahani@hotmail.com",
     initials: "RG",
+    coPi: {
+      name: "Dr. Farhad Kapadia",
+      email: "dr.fkapadia@hindujahospital.com",
+      phone: "",
+    },
     associate: {
       name: "Dr. Smriti Khanna",
       email: "smriti.umesh.khanna@gmail.com",
@@ -195,6 +220,11 @@ const clinicalSiteInvestigators = [
     expertise: ["ICU Palliative Care", "Health Research"],
     email: "aanandini@gmail.com",
     initials: "NV",
+    coPi: {
+      name: "Dr. Havaldhar Amarja Ashok",
+      email: "havaldar.aa@stjohns.in",
+      phone: "9036082112",
+    },
     associate: {
       name: "Dr. Mathangi Krishnakumar",
       email: "mathangi.krishnakumar@stjohns.in",
@@ -209,6 +239,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "anirban.homchoudhuri@gmail.com",
     initials: "AHC",
+    coPi: {
+      name: "Dr. Saurav Mitra Mustafi",
+      email: "saurav82in@yahoo.co.in",
+      phone: "9899124943",
+    },
     associate: {
       name: "Dr. Geetika Khanna",
       email: "principal@vmmc-sjh.nic.in",
@@ -223,6 +258,11 @@ const clinicalSiteInvestigators = [
     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
     email: "drragraj1@gmail.com",
     initials: "RR",
+    coPi: {
+      name: "Madam Rajeshwari",
+      email: "rajeshwari@asterhospital.in",
+      phone: "7892988203",
+    },
     associate: {
       name: "Dr. Surinder Kher",
       email: "surinder.kher@asterhospital.in",
@@ -455,6 +495,27 @@ const Team = () => {
                     {investigator.email}
                   </a>
                   
+                  {investigator.coPi && (
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <p className="text-xs font-medium text-muted-foreground mb-2">Co-PI:</p>
+                      <p className="text-sm font-medium text-foreground">{investigator.coPi.name}</p>
+                      {investigator.coPi.email && (
+                        <a
+                          href={`mailto:${investigator.coPi.email}`}
+                          className="inline-flex items-center text-xs text-primary hover:underline"
+                        >
+                          <Mail className="w-3 h-3 mr-1" />
+                          {investigator.coPi.email}
+                        </a>
+                      )}
+                      {investigator.coPi.phone && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Phone: {investigator.coPi.phone}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
                   {investigator.associate && (
                     <div className="mt-4 pt-4 border-t border-border">
                       <p className="text-xs font-medium text-muted-foreground mb-2">Associate:</p>
