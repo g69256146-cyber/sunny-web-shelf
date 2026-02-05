@@ -114,15 +114,6 @@ const clinicalSiteInvestigators = [
     },
   },
   {
-    institution: "Kasturba Medical College Manipal",
-    name: "Dr Arun Ghoshal",
-    role: "Co-Principal Investigator",
-    position: "Assistant Professor, Department of Palliative Medicine and Supportive Care",
-    expertise: ["Palliative Care Research", "Palliative Care Education"],
-    email: "arun.ghoshal@manipal.edu",
-    initials: "AG",
-  },
-  {
     institution: "AIIMS Delhi",
     name: "Dr Seema Mishra",
     role: "Co-Principal Investigator",
