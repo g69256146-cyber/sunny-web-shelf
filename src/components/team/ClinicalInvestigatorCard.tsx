@@ -57,11 +57,6 @@
                  {investigator.coPi.email}
                </a>
              )}
-             {investigator.coPi.phone && (
-               <p className="text-xs text-muted-foreground mt-1">
-                 Phone: {investigator.coPi.phone}
-               </p>
-             )}
            </div>
          )}
  
@@ -77,11 +72,6 @@
                  <Mail className="w-3 h-3 mr-1" />
                  {investigator.associate.email}
                </a>
-             )}
-             {investigator.associate.phone && (
-               <p className="text-xs text-muted-foreground mt-1">
-                 Phone: {investigator.associate.phone}
-               </p>
              )}
            </div>
          )}

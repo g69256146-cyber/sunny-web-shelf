@@ -96,16 +96,14 @@
    expertise: string[];
    email: string;
    initials: string;
-   coPi?: {
-     name: string;
-     email: string;
-     phone: string;
-   };
-   associate?: {
-     name: string;
-     email: string;
-     phone: string;
-   };
+    coPi?: {
+      name: string;
+      email: string;
+    };
+    associate?: {
+      name: string;
+      email: string;
+    };
  }
  
  export const clinicalSiteInvestigators: ClinicalInvestigator[] = [
@@ -117,16 +115,14 @@
      expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
      email: "naveen.salins@manipal.edu",
      initials: "NS",
-     coPi: {
-       name: "Dr. Arun Ghoshal",
-       email: "arun.ghoshal@manipal.edu",
-       phone: "9434890160",
-     },
-     associate: {
-       name: "Mr. Prasanna Naik",
-       email: "",
-       phone: "9743907407",
-     },
+      coPi: {
+        name: "Dr. Arun Ghoshal",
+        email: "arun.ghoshal@manipal.edu",
+      },
+      associate: {
+        name: "Mr. Prasanna Naik",
+        email: "",
+      },
    },
    {
      institution: "AIIMS Delhi",
@@ -136,11 +132,10 @@
      expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
      email: "seemamishra2003@gmail.com",
      initials: "SM",
-     associate: {
-       name: "Dr. Raghav Gupta",
-       email: "raghavgupta88@gmail.com",
-       phone: "",
-     },
+      associate: {
+        name: "Dr. Raghav Gupta",
+        email: "raghavgupta88@gmail.com",
+      },
    },
    {
      institution: "CMC Vellore",
@@ -150,16 +145,14 @@
      expertise: ["Palliative Care", "Health Research", "Public Policy"],
      email: "jenifermugesh@yahoo.com",
      initials: "JJS",
-     coPi: {
-       name: "Dr. Binila Chacko",
-       email: "binilachacko@cmcvellore.ac.in",
-       phone: "9600272412",
-     },
-     associate: {
-       name: "Dr. Jyothsna Kuriakose",
-       email: "jyothsna.kuriakose@cmcvellore.ac.in",
-       phone: "9605538456",
-     },
+      coPi: {
+        name: "Dr. Binila Chacko",
+        email: "binilachacko@cmcvellore.ac.in",
+      },
+      associate: {
+        name: "Dr. Jyothsna Kuriakose",
+        email: "jyothsna.kuriakose@cmcvellore.ac.in",
+      },
    },
    {
      institution: "Tata Memorial Hospital Mumbai",
@@ -169,16 +162,14 @@
      expertise: ["ICU Palliative Care", "Health Research", "Public Policy"],
      email: "sheila150@hotmail.com",
      initials: "SNM",
-     coPi: {
-       name: "Ms. Farnaz Shaikh",
-       email: "shkfarnaz@gmail.com",
-       phone: "9967024614",
-     },
-     associate: {
-       name: "Dr. Anjana Shrivastava",
-       email: "dranjanashrivastava@gmail.com",
-       phone: "9820401867",
-     },
+      coPi: {
+        name: "Ms. Farnaz Shaikh",
+        email: "shkfarnaz@gmail.com",
+      },
+      associate: {
+        name: "Dr. Anjana Shrivastava",
+        email: "dranjanashrivastava@gmail.com",
+      },
    },
    {
      institution: "Bharati Vidyapeeth Deemed University Pune",
@@ -188,16 +179,14 @@
      expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
      email: "suchetashiva@gmail.com",
      initials: "SI",
-     coPi: {
-       name: "Vikas Govind Munde",
-       email: "vikasmunde010@gmail.com",
-       phone: "9579056920",
-     },
-     associate: {
-       name: "Dr. Rutula",
-       email: "drrutula@gmail.com",
-       phone: "8149990072",
-     },
+      coPi: {
+        name: "Vikas Govind Munde",
+        email: "vikasmunde010@gmail.com",
+      },
+      associate: {
+        name: "Dr. Rutula",
+        email: "drrutula@gmail.com",
+      },
    },
    {
      institution: "P. D. Hinduja Hospital Mumbai",
@@ -207,16 +196,14 @@
      expertise: ["Neurology", "ICU Palliative Care", "Health Research"],
      email: "roop_gursahani@hotmail.com",
      initials: "RG",
-     coPi: {
-       name: "Dr. Farhad Kapadia",
-       email: "dr.fkapadia@hindujahospital.com",
-       phone: "",
-     },
-     associate: {
-       name: "Dr. Smriti Khanna",
-       email: "smriti.umesh.khanna@gmail.com",
-       phone: "9892008228",
-     },
+      coPi: {
+        name: "Dr. Farhad Kapadia",
+        email: "dr.fkapadia@hindujahospital.com",
+      },
+      associate: {
+        name: "Dr. Smriti Khanna",
+        email: "smriti.umesh.khanna@gmail.com",
+      },
    },
    {
      institution: "St John's Medical College Hospital Bangalore",
@@ -226,16 +213,14 @@
      expertise: ["ICU Palliative Care", "Health Research"],
      email: "aanandini@gmail.com",
      initials: "NV",
-     coPi: {
-       name: "Dr. Havaldhar Amarja Ashok",
-       email: "havaldar.aa@stjohns.in",
-       phone: "9036082112",
-     },
-     associate: {
-       name: "Dr. Mathangi Krishnakumar",
-       email: "mathangi.krishnakumar@stjohns.in",
-       phone: "9764062212",
-     },
+      coPi: {
+        name: "Dr. Havaldhar Amarja Ashok",
+        email: "havaldar.aa@stjohns.in",
+      },
+      associate: {
+        name: "Dr. Mathangi Krishnakumar",
+        email: "mathangi.krishnakumar@stjohns.in",
+      },
    },
    {
      institution: "Vardhaman Mahavir Medical College & Safdarjung Hospital Delhi",
@@ -245,16 +230,14 @@
      expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
      email: "anirban.homchoudhuri@gmail.com",
      initials: "AHC",
-     coPi: {
-       name: "Dr. Saurav Mitra Mustafi",
-       email: "saurav82in@yahoo.co.in",
-       phone: "9899124943",
-     },
-     associate: {
-       name: "Dr. Geetika Khanna",
-       email: "principal@vmmc-sjh.nic.in",
-       phone: "9911332802",
-     },
+      coPi: {
+        name: "Dr. Saurav Mitra Mustafi",
+        email: "saurav82in@yahoo.co.in",
+      },
+      associate: {
+        name: "Dr. Geetika Khanna",
+        email: "principal@vmmc-sjh.nic.in",
+      },
    },
    {
      institution: "Aster CMI Hospital Bengaluru",
@@ -264,16 +247,14 @@
      expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
      email: "drragraj1@gmail.com",
      initials: "RR",
-     coPi: {
-       name: "Madam Rajeshwari",
-       email: "rajeshwari@asterhospital.in",
-       phone: "7892988203",
-     },
-     associate: {
-       name: "Dr. Surinder Kher",
-       email: "surinder.kher@asterhospital.in",
-       phone: "9900503671",
-     },
+      coPi: {
+        name: "Madam Rajeshwari",
+        email: "rajeshwari@asterhospital.in",
+      },
+      associate: {
+        name: "Dr. Surinder Kher",
+        email: "surinder.kher@asterhospital.in",
+      },
    },
    {
      institution: "Yashoda Super-speciality Hospital Kaushambi Ghaziabad",
