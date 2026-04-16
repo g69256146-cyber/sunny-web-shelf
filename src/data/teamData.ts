@@ -242,10 +242,10 @@
    {
      institution: "Aster CMI Hospital Bengaluru",
      name: "Dr Raghavendra Ramanjulu",
-     role: "Co-Principal Investigator",
-     position: "Head, Department of Pain and Palliative Medicine",
-     expertise: ["Critical Care", "ICU Palliative Care", "Health Research"],
-     email: "drragraj1@gmail.com",
+    role: "Co-Principal Investigator",
+    position: "Practicing Pain and Palliative Care",
+    expertise: ["Pain Medicine", "Palliative Care", "ICU Palliative Care", "Health Research"],
+    email: "drragraj1@gmail.com",
      initials: "RR",
       coPi: {
         name: "Madam Rajeshwari",
