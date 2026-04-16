@@ -143,7 +143,7 @@
      role: "Co-Principal Investigator",
      position: "Professor and Head, Department of Palliative Medicine",
      expertise: ["Palliative Care", "Health Research", "Public Policy"],
-     email: "jenifermugesh@yahoo.com",
+     email: "jenifer.jeba@cmcvellore.ac.in",
      initials: "JJS",
       coPi: {
         name: "Dr. Binila Chacko",
