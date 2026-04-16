@@ -359,7 +359,7 @@ const Contact = () => {
                 </p>
               <div className="flex items-center gap-2 text-primary font-medium">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:arun.ghoshal@manipal.edu">arun.ghoshal@manipal.edu</a>
+                  <a href="mailto:naveen.salins@manipal.edu">naveen.salins@manipal.edu</a>
                 </div>
               </div>
 
