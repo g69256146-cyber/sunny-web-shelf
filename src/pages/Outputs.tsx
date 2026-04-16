@@ -184,47 +184,13 @@ const Outputs = () => {
 
       {/* Publications */}
       <section className="section-padding">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Academic <span className="text-gradient">Publications</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Peer-reviewed articles and manuscripts from our research.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {publications.map((pub, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl card-hover border border-border"
-              >
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      pub.status === "Published"
-                        ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
-                        : "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400"
-                    }`}
-                  >
-                    {pub.status}
-                  </span>
-                  <span className="text-sm text-muted-foreground">{pub.year}</span>
-                </div>
-                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                  {pub.title}
-                </h3>
-                <p className="text-muted-foreground">{pub.journal}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
-              Additional publications will be listed as they become available.
-            </p>
-          </div>
+        <div className="container mx-auto container-padding text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+            Academic <span className="text-gradient">Publications</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Publications will be listed as they become available.
+          </p>
         </div>
       </section>
 
