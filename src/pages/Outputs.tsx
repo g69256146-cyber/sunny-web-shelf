@@ -28,48 +28,13 @@ const outputCategories = [
 
 const studyDocuments = [
   {
-    title: "Study Protocol (Version 1.0)",
-    category: "Protocol",
-    date: "2024",
-    description:
-      "Complete study protocol detailing the research methodology, objectives, and implementation strategy.",
-    available: true,
-  },
-  {
-    title: "Patient Information Sheet",
+    title: "Investigator Field Guide (Andhra Pradesh)",
     category: "Study Document",
     date: "2024",
     description:
-      "Information document provided to patients and families regarding study participation.",
+      "Field guide for investigators conducting the MATHRU study in Andhra Pradesh.",
     available: true,
-  },
-  {
-    title: "Informed Consent Form",
-    category: "Study Document",
-    date: "2024",
-    description: "Consent documentation for study participants and their families.",
-    available: true,
-  },
-  {
-    title: "Quality of Dying Assessment Tool",
-    category: "Data Collection",
-    date: "2024",
-    description: "Validated instrument for assessing quality of dying in ICU settings.",
-    available: true,
-  },
-  {
-    title: "Family Satisfaction Questionnaire",
-    category: "Data Collection",
-    date: "2024",
-    description: "Questionnaire for assessing family satisfaction with ICU care.",
-    available: true,
-  },
-  {
-    title: "Interim Analysis Report",
-    category: "Report",
-    date: "Upcoming",
-    description: "Preliminary findings and progress update on study implementation.",
-    available: false,
+    file: "/documents/investigator_field_guide_AP.pdf",
   },
 ];
 
