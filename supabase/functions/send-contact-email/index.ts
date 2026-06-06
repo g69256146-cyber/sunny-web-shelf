@@ -165,49 +165,58 @@ const handler = async (req: Request): Promise<Response> => {
     const escapedSubject = escapeHtml(subject.trim());
     const escapedMessage = escapeHtml(message.trim()).replace(/\n/g, "<br>");
 
-    // Send notification email to the research team
-    const notificationEmail = await resend.emails.send({
-      from: "MATHRU Research <onboarding@resend.dev>",
-      to: ["arun.ghoshal@manipal.edu"],
-      subject: `New Inquiry: ${escapedSubject}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${escapedName}</p>
-        <p><strong>Email:</strong> ${escapedEmail}</p>
-        <p><strong>Institution/Affiliation:</strong> ${escapedAffiliation}</p>
-        <p><strong>Subject:</strong> ${escapedSubject}</p>
-        <hr />
-        <h3>Message:</h3>
-        <p>${escapedMessage}</p>
-      `,
-    });
+    // Send notification email to the research team (independent failure)
+    try {
+      const notificationEmail = await resend.emails.send({
+        from: "MATHRU Research <onboarding@resend.dev>",
+        to: ["arun.ghoshal@manipal.edu"],
+        reply_to: email.trim(),
+        subject: `New Inquiry: ${escapedSubject}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${escapedName}</p>
+          <p><strong>Email:</strong> ${escapedEmail}</p>
+          <p><strong>Institution/Affiliation:</strong> ${escapedAffiliation}</p>
+          <p><strong>Subject:</strong> ${escapedSubject}</p>
+          <hr />
+          <h3>Message:</h3>
+          <p>${escapedMessage}</p>
+        `,
+      });
+      console.log("Notification email:", notificationEmail.error ? `failed: ${JSON.stringify(notificationEmail.error)}` : "sent");
+    } catch (notifyErr: any) {
+      console.error("Notification email error:", notifyErr?.message || notifyErr);
+    }
 
-    console.log("Notification email sent:", notificationEmail.id ? "success" : "failed");
-
-    // Send confirmation email to the sender
-    const confirmationEmail = await resend.emails.send({
-      from: "MATHRU Research <onboarding@resend.dev>",
-      to: [email.trim()],
-      subject: "Thank you for your inquiry - MATHRU ICU Palliative Care Research",
-      html: `
-        <h2>Thank you for contacting us, ${escapedName}!</h2>
-        <p>We have received your inquiry regarding: <strong>${escapedSubject}</strong></p>
-        <p>Our research team will review your message and respond within 3-5 business days.</p>
-        <hr />
-        <p><strong>Your message:</strong></p>
-        <p>${escapedMessage}</p>
-        <hr />
-        <p>Best regards,<br>
-        <strong>MATHRU ICU Palliative Care Research Team</strong><br>
-        Department of Palliative Medicine and Supportive Care<br>
-        Kasturba Medical College, Manipal, MAHE</p>
-      `,
-    });
-
-    console.log("Confirmation email sent:", confirmationEmail.id ? "success" : "failed");
+    // Send confirmation email to the sender (independent failure;
+    // Resend's onboarding@resend.dev only delivers to the account owner,
+    // so this will fail for most visitors until a verified domain is set up).
+    try {
+      const confirmationEmail = await resend.emails.send({
+        from: "MATHRU Research <onboarding@resend.dev>",
+        to: [email.trim()],
+        subject: "Thank you for your inquiry - MATHRU ICU Palliative Care Research",
+        html: `
+          <h2>Thank you for contacting us, ${escapedName}!</h2>
+          <p>We have received your inquiry regarding: <strong>${escapedSubject}</strong></p>
+          <p>Our research team will review your message and respond within 3-5 business days.</p>
+          <hr />
+          <p><strong>Your message:</strong></p>
+          <p>${escapedMessage}</p>
+          <hr />
+          <p>Best regards,<br>
+          <strong>MATHRU ICU Palliative Care Research Team</strong><br>
+          Department of Palliative Medicine and Supportive Care<br>
+          Kasturba Medical College, Manipal, MAHE</p>
+        `,
+      });
+      console.log("Confirmation email:", confirmationEmail.error ? `failed: ${JSON.stringify(confirmationEmail.error)}` : "sent");
+    } catch (confirmErr: any) {
+      console.error("Confirmation email error:", confirmErr?.message || confirmErr);
+    }
 
     return new Response(
-      JSON.stringify({ success: true, message: "Emails sent successfully" }),
+      JSON.stringify({ success: true, message: "Submission received" }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
