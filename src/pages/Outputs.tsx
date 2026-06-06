@@ -28,11 +28,11 @@ const outputCategories = [
 
 const studyDocuments = [
   {
-    title: "Investigator Field Guide (Andhra Pradesh)",
+    title: "Investigator Field Guide (AP)",
     category: "Study Document",
     date: "2024",
     description:
-      "Field guide for investigators conducting the MATHRU study in Andhra Pradesh.",
+      "Field guide for investigators conducting the MATHRU study in AP.",
     available: true,
     file: "/documents/investigator_field_guide_AP.pdf",
   },
