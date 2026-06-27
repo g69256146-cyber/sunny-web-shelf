@@ -26,6 +26,18 @@ const outputCategories = [
   },
 ];
 
+const studyProtocols = [
+  {
+    title: "ICMR CAR Grant Proposal",
+    category: "Study Protocol",
+    date: "2024",
+    description:
+      "Final ICMR Centre for Advanced Research (CAR) grant proposal for the MATHRU study.",
+    available: true,
+    file: "/documents/Final_ICMR_CAR_Grant_Proposal.pdf",
+  },
+];
+
 const studyDocuments = [
   {
     title: "Investigator Field Guide",
@@ -37,6 +49,7 @@ const studyDocuments = [
     file: "/documents/investigator_field_guide_AP.pdf",
   },
 ];
+
 
 const publications = [
   {
