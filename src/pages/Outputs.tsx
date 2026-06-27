@@ -26,6 +26,18 @@ const outputCategories = [
   },
 ];
 
+const studyProtocols = [
+  {
+    title: "ICMR CAR Grant Proposal",
+    category: "Study Protocol",
+    date: "2024",
+    description:
+      "Final ICMR Centre for Advanced Research (CAR) grant proposal for the MATHRU study.",
+    available: true,
+    file: "/documents/Final_ICMR_CAR_Grant_Proposal.pdf",
+  },
+];
+
 const studyDocuments = [
   {
     title: "Investigator Field Guide",
@@ -37,6 +49,7 @@ const studyDocuments = [
     file: "/documents/investigator_field_guide_AP.pdf",
   },
 ];
+
 
 const publications = [
   {
@@ -108,7 +121,60 @@ const Outputs = () => {
             </p>
           </div>
 
+      {/* Study Protocols */}
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Study <span className="text-gradient">Protocols</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Research protocols and methodology documents.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {studyProtocols.map((doc, index) => (
+              <div
+                key={index}
+                className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4"
+              >
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                      {doc.category}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{doc.date}</span>
+                  </div>
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                    {doc.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">{doc.description}</p>
+                </div>
+                <Button
+                  variant={doc.available ? "outline" : "ghost"}
+                  size="sm"
+                  className="flex-shrink-0"
+                  disabled={!doc.available}
+                  asChild={doc.available}
+                >
+                  {doc.available ? (
+                    <a href={doc.file} target="_blank" rel="noopener noreferrer" download>
+                      <Download className="w-4 h-4 mr-2" />
+                      Download
+                    </a>
+                  ) : (
+                    "Coming Soon"
+                  )}
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
             {studyDocuments.map((doc, index) => (
               <div
                 key={index}
