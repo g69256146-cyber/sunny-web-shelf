@@ -216,15 +216,45 @@ const Outputs = () => {
 
       {/* Publications */}
       <section className="section-padding">
-        <div className="container mx-auto container-padding text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Academic <span className="text-gradient">Publications</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Publications will be listed as they become available.
-          </p>
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              Academic <span className="text-gradient">Publications</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                    Protocol Paper
+                  </span>
+                  <span className="text-sm text-muted-foreground">2024</span>
+                </div>
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                  Prognostication in ICU: Protocol Paper
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Study protocol paper on prognostication in the ICU setting.
+                </p>
+              </div>
+              <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                <a
+                  href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="section-padding hero-gradient">
