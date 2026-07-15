@@ -255,6 +255,31 @@ const Outputs = () => {
         </div>
       </section>
 
+      {/* Workshop Files */}
+      <section className="section-padding bg-muted">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Workshop Files
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Shared training materials and workshop resources.
+            </p>
+          </div>
+
+          <div className="w-full rounded-xl overflow-hidden border border-border shadow-sm">
+            <iframe
+              src="https://onedrive.live.com/embed?cid=86481F3AF1EE76A3&resid=86481F3AF1EE76A3%21IgAO6jqEwa2aR5Yv3JgePFi5AVEu2FxGdwREjCPfo6WUZwY&em=2"
+              width="100%"
+              height="700px"
+              frameBorder="0"
+              style={{ borderRadius: "12px" }}
+              scrolling="yes"
+              title="Workshop Files"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="section-padding hero-gradient">
