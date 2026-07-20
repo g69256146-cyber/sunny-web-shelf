@@ -263,7 +263,7 @@ const Outputs = () => {
               Workshop Files
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Training materials and workshop resources are available on our YouTube channel.
+              Workshop videos are available on our YouTube channel.
             </p>
           </div>
 
