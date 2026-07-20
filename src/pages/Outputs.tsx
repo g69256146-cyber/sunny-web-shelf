@@ -270,7 +270,7 @@ const Outputs = () => {
           <div className="text-center space-y-4">
             <Button size="lg" variant="default" asChild>
               <a
-                href="http://www.youtube.com/@Mathru-p5g"
+                href="https://www.youtube.com/@Mathru-p5g"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -279,12 +279,12 @@ const Outputs = () => {
             </Button>
             <p>
               <a
-                href="http://www.youtube.com/@Mathru-p5g"
+                href="https://www.youtube.com/@Mathru-p5g"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline break-all"
               >
-                http://www.youtube.com/@Mathru-p5g
+                https://www.youtube.com/@Mathru-p5g
               </a>
             </p>
           </div>
