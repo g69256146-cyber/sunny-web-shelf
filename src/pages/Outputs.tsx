@@ -263,20 +263,20 @@ const Outputs = () => {
               Workshop Files
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Shared training materials and workshop resources.
+              Training materials and workshop resources are available on our YouTube channel.
             </p>
           </div>
 
-          <div className="w-full rounded-xl overflow-hidden border border-border shadow-sm">
-            <iframe
-              src="https://onedrive.live.com/embed?cid=86481F3AF1EE76A3&resid=86481F3AF1EE76A3%21IgAO6jqEwa2aR5Yv3JgePFi5AVEu2FxGdwREjCPfo6WUZwY&em=2"
-              width="100%"
-              height="700px"
-              frameBorder="0"
-              style={{ borderRadius: "12px" }}
-              scrolling="yes"
-              title="Workshop Files"
-            />
+          <div className="text-center">
+            <Button size="lg" variant="default" asChild>
+              <a
+                href="http://www.youtube.com/@Mathru-p5g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit MATHRU Workshop YouTube Channel
+              </a>
+            </Button>
           </div>
         </div>
       </section>
