@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import annualReportPdf from "@/assets/annual_report_year_1.pdf.asset.json";
 
 const outputCategories = [
   {
@@ -50,21 +51,61 @@ const studyDocuments = [
   },
 ];
 
-
-const publications = [
+const reports = [
   {
-    title: "Palliative Care Integration in Indian ICUs: A Scoping Review",
-    journal: "Indian Journal of Critical Care Medicine",
-    status: "Published",
-    year: "2024",
-  },
-  {
-    title: "MATHRU Study Protocol: Implementation of Structured Palliative Care in ICU",
-    journal: "BMC Palliative Care",
-    status: "Under Review",
-    year: "2024",
+    title: "CAR Annual Report Year 1",
+    category: "Annual Report",
+    date: "2026",
+    description:
+      "First-year annual report for the MATHRU ICU Palliative Care Research Project.",
+    available: true,
+    file: annualReportPdf.url,
   },
 ];
+
+interface DocumentCardProps {
+  doc: {
+    title: string;
+    category: string;
+    date: string;
+    description: string;
+    available: boolean;
+    file: string;
+  };
+}
+
+const DocumentCard = ({ doc }: DocumentCardProps) => (
+  <div className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4">
+    <div className="flex-1">
+      <div className="flex flex-wrap items-center gap-2 mb-3">
+        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          {doc.category}
+        </span>
+        <span className="text-sm text-muted-foreground">{doc.date}</span>
+      </div>
+      <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+        {doc.title}
+      </h3>
+      <p className="text-muted-foreground text-sm">{doc.description}</p>
+    </div>
+    <Button
+      variant={doc.available ? "outline" : "ghost"}
+      size="sm"
+      className="flex-shrink-0"
+      disabled={!doc.available}
+      asChild={doc.available}
+    >
+      {doc.available ? (
+        <a href={doc.file} target="_blank" rel="noopener noreferrer" download>
+          <Download className="w-4 h-4 mr-2" />
+          Download
+        </a>
+      ) : (
+        "Coming Soon"
+      )}
+    </Button>
+  </div>
+);
 
 const Outputs = () => {
   return (
@@ -80,7 +121,7 @@ const Outputs = () => {
               Research <span className="text-secondary">Outputs</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 animate-slide-up animation-delay-100">
-              Access study protocols, reports, publications, and research documents 
+              Access study protocols, reports, publications, and research documents
               from the MATHRU ICU Palliative Care Research Project.
             </p>
           </div>
@@ -109,18 +150,6 @@ const Outputs = () => {
         </div>
       </section>
 
-      {/* Study Documents */}
-      <section className="section-padding bg-muted">
-        <div className="container mx-auto container-padding">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Study <span className="text-gradient">Documents</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Protocols, consent forms, and data collection instruments.
-            </p>
-          </div>
-
       {/* Study Protocols */}
       <section className="section-padding">
         <div className="container mx-auto container-padding">
@@ -135,87 +164,54 @@ const Outputs = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {studyProtocols.map((doc, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4"
-              >
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                      {doc.category}
-                    </span>
-                    <span className="text-sm text-muted-foreground">{doc.date}</span>
-                  </div>
-                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                    {doc.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">{doc.description}</p>
-                </div>
-                <Button
-                  variant={doc.available ? "outline" : "ghost"}
-                  size="sm"
-                  className="flex-shrink-0"
-                  disabled={!doc.available}
-                  asChild={doc.available}
-                >
-                  {doc.available ? (
-                    <a href={doc.file} target="_blank" rel="noopener noreferrer" download>
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
-                    </a>
-                  ) : (
-                    "Coming Soon"
-                  )}
-                </Button>
-              </div>
+              <DocumentCard key={index} doc={doc} />
             ))}
           </div>
         </div>
       </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Study Documents */}
+      <section className="section-padding bg-muted">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Study <span className="text-gradient">Documents</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Protocols, consent forms, and data collection instruments.
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {studyDocuments.map((doc, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4"
-              >
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                      {doc.category}
-                    </span>
-                    <span className="text-sm text-muted-foreground">{doc.date}</span>
-                  </div>
-                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                    {doc.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">{doc.description}</p>
-                </div>
-                <Button
-                  variant={doc.available ? "outline" : "ghost"}
-                  size="sm"
-                  className="flex-shrink-0"
-                  disabled={!doc.available}
-                  asChild={doc.available}
-                >
-                  {doc.available ? (
-                    <a href={doc.file} target="_blank" rel="noopener noreferrer" download>
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
-                    </a>
-                  ) : (
-                    "Coming Soon"
-                  )}
-                </Button>
-              </div>
+              <DocumentCard key={index} doc={doc} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reports */}
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Annual <span className="text-gradient">Reports</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Progress reports and findings summaries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {reports.map((doc, index) => (
+              <DocumentCard key={index} doc={doc} />
             ))}
           </div>
         </div>
       </section>
 
       {/* Publications */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
@@ -256,7 +252,7 @@ const Outputs = () => {
       </section>
 
       {/* Workshop Files */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
@@ -298,7 +294,7 @@ const Outputs = () => {
             Access Full Research Materials
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            For detailed study materials, data access requests, or academic collaboration, 
+            For detailed study materials, data access requests, or academic collaboration,
             please contact our research team.
           </p>
           <Button size="lg" variant="secondary" className="mt-8" asChild>
