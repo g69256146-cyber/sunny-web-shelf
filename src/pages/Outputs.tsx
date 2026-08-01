@@ -88,22 +88,38 @@ const DocumentCard = ({ doc }: DocumentCardProps) => (
       </h3>
       <p className="text-muted-foreground text-sm">{doc.description}</p>
     </div>
-    <Button
-      variant={doc.available ? "outline" : "ghost"}
-      size="sm"
-      className="flex-shrink-0"
-      disabled={!doc.available}
-      asChild={doc.available}
-    >
-      {doc.available ? (
-        <a href={doc.file} download>
-          <Download className="w-4 h-4 mr-2" />
-          Download
-        </a>
-      ) : (
-        "Coming Soon"
-      )}
-    </Button>
+    <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+      <Button
+        variant={doc.available ? "outline" : "ghost"}
+        size="sm"
+        disabled={!doc.available}
+        asChild={doc.available}
+      >
+        {doc.available ? (
+          <a href={doc.file} target="_blank" rel="noopener noreferrer">
+            <Eye className="w-4 h-4 mr-2" />
+            View
+          </a>
+        ) : (
+          "Coming Soon"
+        )}
+      </Button>
+      <Button
+        variant={doc.available ? "outline" : "ghost"}
+        size="sm"
+        disabled={!doc.available}
+        asChild={doc.available}
+      >
+        {doc.available ? (
+          <a href={doc.file} download>
+            <Download className="w-4 h-4 mr-2" />
+            Download
+          </a>
+        ) : (
+          "Coming Soon"
+        )}
+      </Button>
+    </div>
   </div>
 );
 
