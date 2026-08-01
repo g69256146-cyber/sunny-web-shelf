@@ -251,17 +251,27 @@ const Outputs = () => {
                   Study protocol paper on prognostication in the ICU setting.
                 </p>
               </div>
-              <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
-                <a
-                  href="/documents/prognostication_in_ICU_protocol_paper.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a
+                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    View
+                  </a>
+                </Button>
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a
+                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    download
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
