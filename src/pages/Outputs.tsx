@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download } from "lucide-react";
+import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import annualReportPdf from "@/assets/annual_report_year_1.pdf.asset.json";
