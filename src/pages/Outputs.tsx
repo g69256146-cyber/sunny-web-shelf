@@ -3,6 +3,9 @@ import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, 
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import annualReportPdf from "@/assets/annual_report_year_1.pdf.asset.json";
+import grantProposalPdf from "@/assets/Final_ICMR_CAR_Grant_Proposal.pdf.asset.json";
+import fieldGuidePdf from "@/assets/investigator_field_guide_AP.pdf.asset.json";
+import protocolPaperPdf from "@/assets/prognostication_in_ICU_protocol_paper.pdf.asset.json";
 
 const outputCategories = [
   {
@@ -35,7 +38,7 @@ const studyProtocols = [
     description:
       "Final ICMR Centre for Advanced Research (CAR) grant proposal for the MATHRU study.",
     available: true,
-    file: "/documents/Final_ICMR_CAR_Grant_Proposal.pdf",
+    file: grantProposalPdf.url,
   },
 ];
 
@@ -47,7 +50,7 @@ const studyDocuments = [
     description:
       "Field guide for investigators conducting the MATHRU study.",
     available: true,
-    file: "/documents/investigator_field_guide_AP.pdf",
+    file: fieldGuidePdf.url,
   },
 ];
 
@@ -254,7 +257,7 @@ const Outputs = () => {
               <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
                 <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
                   <a
-                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    href={protocolPaperPdf.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -264,7 +267,7 @@ const Outputs = () => {
                 </Button>
                 <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
                   <a
-                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    href={protocolPaperPdf.url}
                     download
                   >
                     <Download className="w-4 h-4 mr-2" />
