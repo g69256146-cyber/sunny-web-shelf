@@ -96,7 +96,7 @@ const DocumentCard = ({ doc }: DocumentCardProps) => (
       asChild={doc.available}
     >
       {doc.available ? (
-        <a href={doc.file} target="_blank" rel="noopener noreferrer" download>
+        <a href={doc.file} download>
           <Download className="w-4 h-4 mr-2" />
           Download
         </a>
