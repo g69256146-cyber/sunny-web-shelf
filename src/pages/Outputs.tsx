@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download } from "lucide-react";
+import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import annualReportPdf from "@/assets/annual_report_year_1.pdf.asset.json";
@@ -88,22 +88,38 @@ const DocumentCard = ({ doc }: DocumentCardProps) => (
       </h3>
       <p className="text-muted-foreground text-sm">{doc.description}</p>
     </div>
-    <Button
-      variant={doc.available ? "outline" : "ghost"}
-      size="sm"
-      className="flex-shrink-0"
-      disabled={!doc.available}
-      asChild={doc.available}
-    >
-      {doc.available ? (
-        <a href={doc.file} download>
-          <Download className="w-4 h-4 mr-2" />
-          Download
-        </a>
-      ) : (
-        "Coming Soon"
-      )}
-    </Button>
+    <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+      <Button
+        variant={doc.available ? "outline" : "ghost"}
+        size="sm"
+        disabled={!doc.available}
+        asChild={doc.available}
+      >
+        {doc.available ? (
+          <a href={doc.file} target="_blank" rel="noopener noreferrer">
+            <Eye className="w-4 h-4 mr-2" />
+            View
+          </a>
+        ) : (
+          "Coming Soon"
+        )}
+      </Button>
+      <Button
+        variant={doc.available ? "outline" : "ghost"}
+        size="sm"
+        disabled={!doc.available}
+        asChild={doc.available}
+      >
+        {doc.available ? (
+          <a href={doc.file} download>
+            <Download className="w-4 h-4 mr-2" />
+            Download
+          </a>
+        ) : (
+          "Coming Soon"
+        )}
+      </Button>
+    </div>
   </div>
 );
 
@@ -235,17 +251,27 @@ const Outputs = () => {
                   Study protocol paper on prognostication in the ICU setting.
                 </p>
               </div>
-              <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
-                <a
-                  href="/documents/prognostication_in_ICU_protocol_paper.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a
+                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    View
+                  </a>
+                </Button>
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a
+                    href="/documents/prognostication_in_ICU_protocol_paper.pdf"
+                    download
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
