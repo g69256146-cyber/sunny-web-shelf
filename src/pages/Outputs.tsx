@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-import annualReportPdf from "@/assets/annual_report_year_1.pdf.asset.json";
-import grantProposalPdf from "@/assets/Final_ICMR_CAR_Grant_Proposal.pdf.asset.json";
-import fieldGuidePdf from "@/assets/investigator_field_guide_AP.pdf.asset.json";
-import protocolPaperPdf from "@/assets/prognostication_in_ICU_protocol_paper.pdf.asset.json";
+// PDFs are served from /public/documents so they work on any static host
+const annualReportPdf = { url: "/documents/CAR_Annual_Report_Year_1.pdf" };
+const grantProposalPdf = { url: "/documents/Final_ICMR_CAR_Grant_Proposal.pdf" };
+const fieldGuidePdf = { url: "/documents/investigator_field_guide_AP.pdf" };
+const protocolPaperPdf = { url: "/documents/prognostication_in_ICU_protocol_paper.pdf" };
 
 const outputCategories = [
   {
