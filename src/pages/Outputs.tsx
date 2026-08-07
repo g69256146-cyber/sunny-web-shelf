@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, Eye } from "lucide-react";
+import { ArrowRight, FileText, BookOpen, ClipboardList, Presentation, Download, Eye, Folder, FolderOpen, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import Layout from "@/components/layout/Layout";
 // PDFs are served from /public/documents so they work on any static host
 const annualReportPdf = { url: "/documents/CAR_Annual_Report_Year_1.pdf" };
