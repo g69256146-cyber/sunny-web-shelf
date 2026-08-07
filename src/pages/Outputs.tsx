@@ -77,6 +77,9 @@ const annexures = [
   { label: "Annexure 6B", file: "/documents/annexures/Annexure_6B.pdf" },
   { label: "Annexure 7", file: "/documents/annexures/Annexure_7.pdf" },
   { label: "Annexure 8", file: "/documents/annexures/Annexure_8.pdf" },
+  { label: "Consolidated SOE — KMC & SJMC", file: "/documents/annexures/Consolidated_SOE-KMC_SJMC.pdf" },
+  { label: "Consolidated UC — KMC & SJMC", file: "/documents/annexures/Consolidated_UC-KMC_SJMC.pdf" },
+  { label: "Outcome Assessment", file: "/documents/annexures/Outcome_Assessment.pdf" },
 ];
 
 
