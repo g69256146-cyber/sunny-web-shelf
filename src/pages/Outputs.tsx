@@ -238,45 +238,60 @@ const Outputs = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="max-w-4xl mx-auto space-y-4">
             {reports.map((doc, index) => (
               <DocumentCard key={index} doc={doc} />
             ))}
-          </div>
 
-          <div className="mt-8 p-6 bg-card rounded-xl border border-border">
-            <h3 className="text-lg font-display font-semibold text-foreground mb-1">
-              Annexures — CAR Annual Report Year 1
-            </h3>
-            <p className="text-sm text-muted-foreground mb-5">
-              Supporting annexures accompanying the first-year annual report.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {annexures.map((a) => (
-                <div
-                  key={a.label}
-                  className="flex items-center justify-between gap-2 p-3 rounded-lg border border-border bg-background"
-                >
-                  <span className="flex items-center gap-2 text-sm font-medium text-foreground">
-                    <FileText className="w-4 h-4 text-primary flex-shrink-0" />
-                    {a.label}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={a.file} target="_blank" rel="noopener noreferrer" aria-label={`View ${a.label}`}>
-                        <Eye className="w-4 h-4" />
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={a.file} download aria-label={`Download ${a.label}`}>
-                        <Download className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  </span>
+            {/* Annexures folder nested under the annual report */}
+            <div className="ml-0 sm:ml-8 border-l-2 border-border pl-0 sm:pl-6">
+              <Collapsible>
+                <div className="bg-card rounded-xl border border-border overflow-hidden">
+                  <CollapsibleTrigger className="w-full flex items-center gap-3 p-5 text-left hover:bg-muted/50 transition-colors group">
+                    <Folder className="w-5 h-5 text-primary flex-shrink-0 group-data-[state=open]:hidden" />
+                    <FolderOpen className="w-5 h-5 text-primary flex-shrink-0 hidden group-data-[state=open]:block" />
+                    <span className="flex-1">
+                      <span className="block font-display font-semibold text-foreground">
+                        Annexures
+                      </span>
+                      <span className="block text-sm text-muted-foreground">
+                        {annexures.length} supporting documents
+                      </span>
+                    </span>
+                    <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="p-5 pt-0 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {annexures.map((a) => (
+                        <div
+                          key={a.label}
+                          className="flex items-center justify-between gap-2 p-3 rounded-lg border border-border bg-background"
+                        >
+                          <span className="flex items-center gap-2 text-sm font-medium text-foreground">
+                            <FileText className="w-4 h-4 text-primary flex-shrink-0" />
+                            {a.label}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Button variant="ghost" size="sm" asChild>
+                              <a href={a.file} target="_blank" rel="noopener noreferrer" aria-label={`View ${a.label}`}>
+                                <Eye className="w-4 h-4" />
+                              </a>
+                            </Button>
+                            <Button variant="ghost" size="sm" asChild>
+                              <a href={a.file} download aria-label={`Download ${a.label}`}>
+                                <Download className="w-4 h-4" />
+                              </a>
+                            </Button>
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </CollapsibleContent>
                 </div>
-              ))}
+              </Collapsible>
             </div>
           </div>
+
 
         </div>
       </section>
