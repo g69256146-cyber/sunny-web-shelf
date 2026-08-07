@@ -67,6 +67,19 @@ const reports = [
   },
 ];
 
+const annexures = [
+  { label: "Annexure 1", file: "/documents/annexures/Annexure_1.pdf" },
+  { label: "Annexure 2", file: "/documents/annexures/Annexure_2.pdf" },
+  { label: "Annexure 3", file: "/documents/annexures/Annexure_3.pdf" },
+  { label: "Annexure 4", file: "/documents/annexures/Annexure_4.pdf" },
+  { label: "Annexure 5", file: "/documents/annexures/Annexure_5.pdf" },
+  { label: "Annexure 6A", file: "/documents/annexures/Annexure_6A.pdf" },
+  { label: "Annexure 6B", file: "/documents/annexures/Annexure_6B.pdf" },
+  { label: "Annexure 7", file: "/documents/annexures/Annexure_7.pdf" },
+  { label: "Annexure 8", file: "/documents/annexures/Annexure_8.pdf" },
+];
+
+
 interface DocumentCardProps {
   doc: {
     title: string;
