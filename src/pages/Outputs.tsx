@@ -67,6 +67,19 @@ const reports = [
   },
 ];
 
+const annexures = [
+  { label: "Annexure 1", file: "/documents/annexures/Annexure_1.pdf" },
+  { label: "Annexure 2", file: "/documents/annexures/Annexure_2.pdf" },
+  { label: "Annexure 3", file: "/documents/annexures/Annexure_3.pdf" },
+  { label: "Annexure 4", file: "/documents/annexures/Annexure_4.pdf" },
+  { label: "Annexure 5", file: "/documents/annexures/Annexure_5.pdf" },
+  { label: "Annexure 6A", file: "/documents/annexures/Annexure_6A.pdf" },
+  { label: "Annexure 6B", file: "/documents/annexures/Annexure_6B.pdf" },
+  { label: "Annexure 7", file: "/documents/annexures/Annexure_7.pdf" },
+  { label: "Annexure 8", file: "/documents/annexures/Annexure_8.pdf" },
+];
+
+
 interface DocumentCardProps {
   doc: {
     title: string;
@@ -227,6 +240,41 @@ const Outputs = () => {
               <DocumentCard key={index} doc={doc} />
             ))}
           </div>
+
+          <div className="mt-8 p-6 bg-card rounded-xl border border-border">
+            <h3 className="text-lg font-display font-semibold text-foreground mb-1">
+              Annexures — CAR Annual Report Year 1
+            </h3>
+            <p className="text-sm text-muted-foreground mb-5">
+              Supporting annexures accompanying the first-year annual report.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {annexures.map((a) => (
+                <div
+                  key={a.label}
+                  className="flex items-center justify-between gap-2 p-3 rounded-lg border border-border bg-background"
+                >
+                  <span className="flex items-center gap-2 text-sm font-medium text-foreground">
+                    <FileText className="w-4 h-4 text-primary flex-shrink-0" />
+                    {a.label}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href={a.file} target="_blank" rel="noopener noreferrer" aria-label={`View ${a.label}`}>
+                        <Eye className="w-4 h-4" />
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href={a.file} download aria-label={`Download ${a.label}`}>
+                        <Download className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
