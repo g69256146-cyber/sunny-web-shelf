@@ -308,7 +308,7 @@ const Contact = () => {
             <div className="space-y-8">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.123456789!2d74.7891!3d13.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDIwJzQ0LjIiTiA3NMKwNDcnMjAuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://maps.google.com/maps?q=Manipal+Hospice+and+Respite+Centre,+Kollalagiri-Bhandsalley+Road,+Banabettu,+Havanje,+Udupi,+Karnataka+576124,+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
