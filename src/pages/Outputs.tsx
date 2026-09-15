@@ -81,6 +81,8 @@ const annexures = [
   { label: "Consolidated SOE — KMC & SJMC", file: "/documents/annexures/Consolidated_SOE-KMC_SJMC.pdf" },
   { label: "Consolidated UC — KMC & SJMC", file: "/documents/annexures/Consolidated_UC-KMC_SJMC.pdf" },
   { label: "Outcome Assessment", file: "/documents/annexures/Outcome_Assessment.pdf" },
+  { label: "ICMR CAR Annual Report Year 2025-26", file: "/documents/annexures/ICMR_CAR_Annual_Report_Year_2025-26.pdf" },
+  { label: "ICMR Annual Progress Report (Updated to 31 August 2026)", file: "/documents/annexures/ICMR_Annual_Progress_Report_Updated_to_31_August_2026.pdf" },
 ];
 
 
