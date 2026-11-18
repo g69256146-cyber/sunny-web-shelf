@@ -8,6 +8,9 @@ const annualReportPdf = { url: "/documents/CAR_Annual_Report_Year_1.pdf" };
 const grantProposalPdf = { url: "/documents/Final_ICMR_CAR_Grant_Proposal.pdf" };
 const fieldGuidePdf = { url: "/documents/investigator_field_guide_AP.pdf" };
 const protocolPaperPdf = { url: "/documents/prognostication_in_ICU_protocol_paper.pdf" };
+const communicationProtocolPdf = {
+  url: "/documents/communication_high_stakes_icu_family_clinician_interactions_protocol.pdf",
+};
 
 const outputCategories = [
   {
@@ -311,6 +314,36 @@ const Outputs = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                    Study Protocol
+                  </span>
+                  <span className="text-sm text-muted-foreground">2026</span>
+                </div>
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                  Communication during high-stakes ICU family–clinician interactions: a realist review protocol
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Article in press by Arun Ghoshal, Ashmitha Prasad, Aparna Nanda, and Naveen Salins. DOI: 10.1186/s13643-026-03370-z.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a href={communicationProtocolPdf.url} target="_blank" rel="noopener noreferrer">
+                    <Eye className="w-4 h-4 mr-2" />
+                    View
+                  </a>
+                </Button>
+                <Button variant="outline" size="sm" className="flex-shrink-0" asChild>
+                  <a href={communicationProtocolPdf.url} download>
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </Button>
+              </div>
+            </div>
             <div className="p-6 bg-card rounded-xl border border-border flex flex-col sm:flex-row sm:items-start gap-4">
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
